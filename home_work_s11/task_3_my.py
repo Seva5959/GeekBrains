@@ -20,3 +20,6 @@ class Rectangle:
 a = Rectangle(10,23)
 d = Rectangle(10)
 print(a+d)
+#fnjsjdf fsdfjksd fs kfsjd fs
+
+
