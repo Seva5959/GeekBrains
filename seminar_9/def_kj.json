@@ -138,5 +138,33 @@
             "len": "190",
             "siti": "PERM"
         }
+    },
+    "call_11": {
+        "result": 181,
+        "args": [
+            "2",
+            "3",
+            "5",
+            "21"
+        ],
+        "kwargs": {
+            "name": "vasa",
+            "len": "150",
+            "siti": "Moskva"
+        }
+    },
+    "call_12": {
+        "result": 307,
+        "args": [
+            "0",
+            "43",
+            "43",
+            "31"
+        ],
+        "kwargs": {
+            "name": "KOLa",
+            "len": "190",
+            "siti": "PERM"
+        }
     }
 }
