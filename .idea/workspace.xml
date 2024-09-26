@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02320992-42e4-4c81-8cec-778059759b37" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/seminar_12/task_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seminar_12/task_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seminar_12/task_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seminar_12/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="02320992-42e4-4c81-8cec-778059759b37" name="Changes" comment="24.09.24, 12 семинар 2 задание">
+      <change afterPath="$PROJECT_DIR$/seminar_12/task_4.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar_9/def_kj.json" beforeDir="false" afterPath="$PROJECT_DIR$/seminar_9/def_kj.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seminar_12/task_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/seminar_12/task_3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seminar_12/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/seminar_12/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +24,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/seminar_12/task_2.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -46,12 +45,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/loha8/OneDrive/Рабочий стол/GeekBrains",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "last_opened_file_path": "C:/Users/loha8/Downloads/IntelliJ-AutoHotkey-Plugin-v0.10.4.zip",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "two.files.diff.last.used.file": "C:/Users/loha8/OneDrive/Рабочий стол/GeekBrains/seminar_10/task_3"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.Quitting_Smoking">
     <configuration type="PythonConfigurationType" factoryName="Python">
       <module name="GeekBrains" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -177,9 +176,22 @@
       <option name="presentableId" value="Default" />
       <updated>1720962189841</updated>
     </task>
+    <task id="LOCAL-00001" summary="24.09.24, 12 семинар 2 задание">
+      <option name="closed" value="true" />
+      <created>1727196988051</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1727196988052</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="24.09.24, 12 семинар 2 задание" />
+    <option name="LAST_COMMIT_MESSAGE" value="24.09.24, 12 семинар 2 задание" />
   </component>
 </project>
