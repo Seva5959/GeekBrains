@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02320992-42e4-4c81-8cec-778059759b37" name="Changes" comment="24.09.24, 12 семинар 2 задание">
-      <change afterPath="$PROJECT_DIR$/seminar_12/task_4.py" afterDir="false" />
+    <list default="true" id="02320992-42e4-4c81-8cec-778059759b37" name="Changes" comment="Завершил график курения &#10;Сделал 5 задание 11 семинара">
+      <change afterPath="$PROJECT_DIR$/HotKey/SevaHotKey.ahk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotKey/change_language_en.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotKey/change_language_ru.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotKey/get_layout.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotKey/old_ahk_file.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar_12/task_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/seminar_12/task_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar_12/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/seminar_12/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quitting_Smoking.py" beforeDir="false" afterPath="$PROJECT_DIR$/Quitting_Smoking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SevaHotKey.ahk" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +30,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Seva5959&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Seva5959/GeekBrains.git&quot;,
+    &quot;accountId&quot;: &quot;87daf00a-0f29-49af-8572-02b1baa3f119&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/seminar_12/task_2.py" root0="SKIP_INSPECTION" />
   </component>
@@ -40,16 +57,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/loha8/Downloads/IntelliJ-AutoHotkey-Plugin-v0.10.4.zip",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "two.files.diff.last.used.file": "C:/Users/loha8/OneDrive/Рабочий стол/GeekBrains/seminar_10/task_3"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;AutoHotkey.SevaHotKey.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Quitting_Smoking.executor&quot;: &quot;Run&quot;,
+    &quot;Python.get_layout.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hot_key.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/segyn/Desktop/codewarse&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;language.autohotkey&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/loha8/OneDrive/Рабочий стол/GeekBrains/seminar_10/task_3&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.Quitting_Smoking">
     <configuration type="PythonConfigurationType" factoryName="Python">
       <module name="GeekBrains" />
@@ -75,13 +96,13 @@
     </configuration>
     <configuration name="Quitting_Smoking" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="GeekBrains" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.11 (pythonProject)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -97,13 +118,13 @@
     </configuration>
     <configuration name="seminar_task_4" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="GeekBrains" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.11 (pythonProject)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/seminar_7" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -119,13 +140,13 @@
     </configuration>
     <configuration name="task_3" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="GeekBrains" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.11 (pythonProject)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/home_work_s11" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -141,13 +162,13 @@
     </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="GeekBrains" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.11 (pythonProject)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/seminar_12" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -166,6 +187,13 @@
         <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-98f27166c754-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.21829.153" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

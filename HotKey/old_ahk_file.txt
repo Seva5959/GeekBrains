@@ -1,0 +1,48 @@
+#Requires AutoHotkey v2.0
+
+; Пути к звуковым файлам (предполагается, что они находятся в той же директории, что и скрипт)
+SoundFileRu := A_ScriptDir . "\change_language_ru.mp3"
+SoundFileEn := A_ScriptDir . "\change_language_en.mp3"
++F10:: {
+    Run '"C:\Users\segyn\AppData\Local\Programs\Opera GX\launcher.exe" "https://chatgpt.com/?model=auto"'
+}
+
++F11:: {
+    Run '"C:\Users\segyn\AppData\Local\Programs\Opera GX\launcher.exe" "https://claude.ai/new"'
+}
+
++F12:: {
+    Run '"C:\Users\segyn\AppData\Local\Programs\Opera GX\launcher.exe" "https://vk.com/im?peers=473315238"'
+}
+
+; Переключить Caps Lock при нажатии Shift + Caps Lock
++CapsLock:: {
+    SetCapsLockState(GetKeyState("CapsLock", "T") ? 0 : 1)
+}
+
+; Отключить Caps Lock при одиночном нажатии
+CapsLock::Return
+F11::Return
+F12::Return
+
+^p:: {
+    Send("^c")                ; Копирует выделенный текст
+    Sleep(300)                ; Задержка для завершения копирования
+    Click(15, 420)            ; Кликает по координатам в окне Яндекс Переводчика для ПК
+    Sleep(100)                ; Задержка для завершения клика
+    Send("!{d}")
+    Sleep(100)
+    Send("^v")                ; Вставляет скопированный текст
+}
+
+~*Shift::
+~*Alt::
+{
+    ; Проверяем, были ли нажаты обе клавиши
+    if (GetKeyState("Shift", "P") && GetKeyState("Alt", "P")) {
+        ; Воспроизведение звукового файла
+        SoundPlay(SoundFileEn)
+    }
+}
+
+return
