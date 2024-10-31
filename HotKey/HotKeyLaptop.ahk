@@ -1,18 +1,18 @@
-﻿#Requires AutoHotkey v2.0
+#Requires AutoHotkey v2.0
 
 SoundFileRu := A_ScriptDir . "\change_language_ru.mp3"
 SoundFileEn := A_ScriptDir . "\change_language_en.mp3"
 
 +F10:: {
-    Run '"C:\Users\segyn\AppData\Local\Programs\Opera GX\launcher.exe" "https://chatgpt.com/?model=auto"'
+    Run '"C:\Users\loha8\AppData\Local\Programs\Opera GX\launcher.exe" "https://chatgpt.com/?model=auto"'
 }
 
 +F11:: {
-    Run '"C:\Users\segyn\AppData\Local\Programs\Opera GX\launcher.exe" "https://claude.ai/new"'
+    Run '"C:\Users\loha8\AppData\Local\Programs\Opera GX\launcher.exe" "https://claude.ai/new"'
 }
 
 +F12:: {
-    Run '"C:\Users\segyn\AppData\Local\Programs\Opera GX\launcher.exe" "https://vk.com/im?peers=473315238"'
+    Run '"C:\Users\loha8\AppData\Local\Programs\Opera GX\launcher.exe" "https://vk.com/im?peers=473315238"'
 }
 
 ; Переключить Caps Lock при нажатии Shift + Caps Lock

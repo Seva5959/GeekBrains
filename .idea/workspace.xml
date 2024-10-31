@@ -4,16 +4,61 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02320992-42e4-4c81-8cec-778059759b37" name="Changes" comment="Завершил график курения &#10;Сделал 5 задание 11 семинара">
-      <change afterPath="$PROJECT_DIR$/HotKey/SevaHotKey.ahk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotKey/change_language_en.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotKey/change_language_ru.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotKey/get_layout.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotKey/old_ahk_file.txt" afterDir="false" />
+    <list default="true" id="02320992-42e4-4c81-8cec-778059759b37" name="Changes" comment="добавил AutoHotKey файл">
+      <change afterPath="$PROJECT_DIR$/HotKey/HotKeyLaptop.ahk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_15/task_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_15/task_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_15/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s12/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s13/data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s13/excep.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s13/exceptions_for_1_task.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s13/task_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s13/task_1_my.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s13/task_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s13/task_2_my.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s13/task_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s13/task_3_my.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s13/task_4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s13/task_4_my.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s13/task_5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s13/task_5_my.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s13/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s14/task_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s14/task_1_my.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s14/task_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s14/task_2_my.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s14/task_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s14/task_3_my.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s14/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s14/test_for_task_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s14/test_for_task_1_my.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s14/test_for_task_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s14/test_for_task_2_my.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s14/test_for_task_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_work_s14/test_for_task_3_my.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seminar_13/file.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seminar_13/task_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seminar_13/task_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seminar_13/task_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seminar_13/task_4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seminar_13/task_5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seminar_13/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seminar_14/task_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seminar_14/task_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seminar_14/task_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seminar_14/task_4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seminar_14/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seminar_15/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quitting_Smoking.py" beforeDir="false" afterPath="$PROJECT_DIR$/Quitting_Smoking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SevaHotKey.ahk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotKey/SevaHotKey.ahk" beforeDir="false" afterPath="$PROJECT_DIR$/HotKey/SevaHotKey.ahk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotKey/old_ahk_file.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HotKey/old_ahk_file.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seminar_12/task_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/seminar_12/task_4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seminar_12/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/seminar_12/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/банкомат/ATM.py" beforeDir="false" afterPath="$PROJECT_DIR$/банкомат/ATM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/банкомат/information_about_user.csv" beforeDir="false" afterPath="$PROJECT_DIR$/банкомат/information_about_user.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,20 +75,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Seva5959&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Seva5959/GeekBrains.git&quot;,
-    &quot;accountId&quot;: &quot;87daf00a-0f29-49af-8572-02b1baa3f119&quot;
-  }
-}</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Quitting_Smoking.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/seminar_12/task_2.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -57,143 +94,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;AutoHotkey.SevaHotKey.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Quitting_Smoking.executor&quot;: &quot;Run&quot;,
-    &quot;Python.get_layout.executor&quot;: &quot;Run&quot;,
-    &quot;Python.hot_key.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/segyn/Desktop/codewarse&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;language.autohotkey&quot;,
-    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/loha8/OneDrive/Рабочий стол/GeekBrains/seminar_10/task_3&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/loha8/OneDrive/Рабочий стол/cd_v_5959",
+    "settings.editor.selected.configurable": "language.autohotkey",
+    "two.files.diff.last.used.file": "C:/Users/loha8/OneDrive/Рабочий стол/GeekBrains/seminar_10/task_3"
   }
-}</component>
-  <component name="RunManager" selected="Python.Quitting_Smoking">
-    <configuration type="PythonConfigurationType" factoryName="Python">
-      <module name="GeekBrains" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.11 (pythonProject)" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/seminar_9" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/seminar_9/task_3.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="AhkRunConfiguration">
+      <option name="runner" value="" />
+      <option name="pathToScript" value="" />
+      <option name="arguments" value="" />
+      <switches>
+        <switch name="/ErrorStdOut" enabled="true" />
+      </switches>
       <method v="2" />
     </configuration>
-    <configuration name="Quitting_Smoking" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="GeekBrains" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Quitting_Smoking.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="seminar_task_4" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="GeekBrains" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/seminar_7" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/seminar_7/seminar_task_4.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="task_3" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="GeekBrains" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/home_work_s11" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/home_work_s11/task_3.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="GeekBrains" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/seminar_12" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/seminar_12/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.test" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-python-sdk-98f27166c754-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.21829.153" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

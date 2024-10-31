@@ -1,0 +1,15 @@
+Index: SevaHotKey.ahk
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#Requires AutoHotkey v2.0\r\nд\r\n\r\n\r\n; Переключить Caps Lock при нажатии Shift + Caps Lock\r\n+CapsLock::\r\n{\r\n    SetCapsLockState(GetKeyState(\"CapsLock\", \"T\") ? 0 : 1)\r\n}\r\n\r\n; Отключить Caps Lock при одиночном нажатии\r\nCapsLock::Return\r\nF11::Return\r\nF12::Return\r\n\r\n^p::{  \r\n    Send(\"^c\")                ; Копирует выделенный текст\r\n    Sleep(100)                ; Задержка для завершения копирования\r\n    Click(20, 371)           ; Кликает по координатам в окне Яндекс Переводчика\r\n    Sleep(100)                ; Задержка для завершения клика\r\n    Send(\"^v\")                ; Вставляет скопированный текст\r\n}\r\n\r\nreturn\r\n
+===================================================================
+diff --git a/SevaHotKey.ahk b/SevaHotKey.ahk
+--- a/SevaHotKey.ahk	
++++ b/SevaHotKey.ahk	
+@@ -1,6 +1,4 @@
+ #Requires AutoHotkey v2.0
+-д
+-
+ 
+ ; Переключить Caps Lock при нажатии Shift + Caps Lock
+ +CapsLock::
