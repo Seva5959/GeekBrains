@@ -21,3 +21,15 @@
 2024-11-02 14:04:08 - monitors user login - INFO - User Максим  logged in chat
 2024-11-02 14:04:12 - monitors user login - INFO - User Максим  logged in chat
 2024-11-02 14:06:33 - monitors user login - INFO - User Максим  logged in chat
+2024-11-02 17:19:18 - monitors user login - INFO - User Богдан logged in chat
+2024-11-02 17:19:29 - info logger - ERROR - The Богдан caused an error: invalid literal for int() with base 10: ''
+2024-11-02 17:19:29 - info logger - ERROR - The Богдан caused an error: invalid literal for int() with base 10: ''
+2024-11-02 17:19:29 - info logger - ERROR - The Богдан caused an error: invalid literal for int() with base 10: ''
+2024-11-02 17:19:29 - info logger - ERROR - The Богдан caused an error: invalid literal for int() with base 10: ''
+2024-11-02 17:19:29 - info logger - ERROR - The Богдан caused an error: invalid literal for int() with base 10: ''
+2024-11-02 17:19:29 - info logger - ERROR - The Богдан caused an error: invalid literal for int() with base 10: ''
+2024-11-02 17:19:29 - info logger - ERROR - The Богдан caused an error: invalid literal for int() with base 10: ''
+2024-11-02 17:19:29 - info logger - ERROR - The Богдан caused an error: invalid literal for int() with base 10: ''
+2024-11-02 17:19:29 - info logger - ERROR - The Богдан caused an error: invalid literal for int() with base 10: ''
+2024-11-02 17:19:29 - info logger - ERROR - The Богдан caused an error: invalid literal for int() with base 10: ''
+2024-11-02 17:19:34 - info logger - ERROR - The Богдан caused an error: invalid literal for int() with base 10: "l'"

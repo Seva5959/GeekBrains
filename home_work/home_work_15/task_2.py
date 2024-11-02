@@ -1,11 +1,12 @@
+import argparse
 import csv
 import logging
 
 PATH = 'data.csv'
 
-# добавить парсеры
+
 class Chat:
-    def __init__(self, path):
+    def __init__(self, name, path):
         # create format for logger
         lg_handler = logging.FileHandler('errors_from_chat.log',mode='a',encoding='utf-8')
         formatt = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s", datefmt='%Y-%m-%d %H:%M:%S')
@@ -22,7 +23,7 @@ class Chat:
 
         # initializing variables
         self.name_file = path
-        self.name = input('Hello user! \nPlease write you name: ')
+        self.name = name
         self.main()
 
     def interface(self):
@@ -77,4 +78,13 @@ class Chat:
             elif user_input == 3:
                 print(f'{self.name}, you have logged out. Goodbye!')
                 break
-a = Chat(PATH)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument('name',type=str)
+    parser.add_argument('--file_name', type=str, default='data.csv')
+    args = parser.parse_args()
+
+    test_chat = Chat(args.name, args.file_name)
+

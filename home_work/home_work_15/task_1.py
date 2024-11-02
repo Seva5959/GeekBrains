@@ -1,4 +1,5 @@
 import logging
+import argparse
 
 simple_logger = logging.getLogger('Логгер для функции devizion')
 simple_logger.setLevel(logging.ERROR)
@@ -26,11 +27,13 @@ def devizion(num_1: float, num_2: float):
         return None
 
 
+parser = argparse.ArgumentParser()
+parser.add_argument('num1', type=float)
+parser.add_argument('num2', type=float)
+args = parser.parse_args()
 
-a = devizion(2, 0)
-a = devizion(3, 3)
-a = devizion(6.5, 6)
-a = devizion(0, 3)
-a = devizion(2, 0)
-
-
+result = devizion(args.num1, args.num2)
+if result is not None:
+    print(f'Результат деления: {result}')
+else:
+    print('Произошла ошибка при делении.')
