@@ -1,5 +1,5 @@
 from flask import Flask
-#38.10
+
 
 app = Flask(__name__)
 
@@ -13,5 +13,8 @@ def hello(name='uncown'):
 def set_path(file):
     return f'Путь до файла: {file}'
 
+@app.route('/number/<int:num>/')
+def dig(num):
+    return f'Передано число {num}'
 
 app.run()
