@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    flex-direction: column; /* Устанавливаем вертикальное направление */
+}
+.image-container {
+    position: relative; /* Делаем контейнер позиционированным */
+    text-align: center; /* Выравнивание изображений по центру */
+}
+.center-image {
+    width: 300px; /* Фиксированная ширина */
+    height: 300px; /* Фиксированная высота */
+    object-fit: cover; /* Обеспечиваем сохранение пропорций изображения */
+    margin: 10px 0; /* Отступ между изображениями */
+}
+.bottom-images {
+    display: flex; /* Устанавливаем флекс-контейнер для нижних изображений */
+    justify-content: space-between; /* Распределяем изображения по краям */
+    width: 100%; /* Занимаем всю ширину контейнера */
+    max-width: 500px; /* Ограничиваем максимальную ширину */
+}
+.bottom-image {
+    width: 150px; /* Фиксированная ширина для нижних изображений */
+    height: 150px; /* Фиксированная высота для нижних изображений */
+    object-fit: cover; /* Обеспечиваем сохранение пропорций изображения */
+    margin: 10px; /* Отступ между нижними изображениями */
+}
