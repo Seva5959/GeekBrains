@@ -1,0 +1,19 @@
+* {
+    padding: 0px;
+    margin: 10;
+
+}
+
+table {
+    border-collapse: collapse;
+}
+
+body {
+    background-color: lightblue;
+}
+
+td {
+    border: 1px solid grey;
+    padding: 5px;
+    text-align: center;
+}

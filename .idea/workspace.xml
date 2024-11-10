@@ -4,322 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02320992-42e4-4c81-8cec-778059759b37" name="Changes" comment="1 seminar, task 4">
-      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project_1/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project_1/static/foto.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project_1/static/foto_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project_1/static/foto_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project_1/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project_1/templates/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/static/image/foto.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/task_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/task_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/task_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/task_4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/upload.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jinja2/lesson_1/task_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s10/task_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s10/task_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s10/task_3_my.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s10/task_4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s10/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s11/task_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s11/task_1_my.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s11/task_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s11/task_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s11/task_3_my.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s11/task_4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s11/task_4_my.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s11/task_5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s11/task_5_my.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s11/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s12/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s13/chat.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s13/data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s13/excep.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s13/exceptions_for_1_task.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s13/karma.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s13/out_file.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s13/task_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s13/task_1_my.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s13/task_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s13/task_2_my.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s13/task_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s13/task_3_my.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s13/task_4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s13/task_4_my.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s13/task_5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s13/task_5_my.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s13/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s14/aboba.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s14/task_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s14/task_1_my.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s14/task_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s14/task_2_my.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s14/task_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s14/task_3_my.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s14/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s14/test_for_task_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s14/test_for_task_1_my.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s14/test_for_task_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s14/test_for_task_2_my.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s14/test_for_task_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s14/test_for_task_3_my.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s15/data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s15/errors_from_chat.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s15/file_name.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s15/result.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s15/task_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s15/task_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s15/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s7/NAME_NEW.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s7/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s7/home_work_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s7/new_dir/NAME_NEW.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s7/new_dir/new_file.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s7/new_dir/new_file1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s7/new_dir/new_file2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s7/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s7/test_folder/new_file_001..txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s7/test_folder/new_file_002..txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s7/test_folder/new_file_003..txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s7/test_folder/new_file_004..txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_10/OOP.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_10/OOP_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_10/task_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_10/task_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_10/task_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_10/task_4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_10/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_11/info_about_orders.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_11/library.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_11/market.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_11/task_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_11/task_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_11/task_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_11/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_11/warehouse.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_12/json_result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_12/task_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_12/task_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_12/task_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_12/task_4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_12/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_13/file.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_13/task_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_13/task_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_13/task_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_13/task_4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_13/task_5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_13/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_14/task_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_14/task_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_14/task_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_14/task_4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_14/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_15/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_7/data_task_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_7/data_task_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_7/data_task_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_7/data_task_5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_7/seminar_task_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_7/seminar_task_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_7/seminar_task_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_7/seminar_task_4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_8/file.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_8/json_task_4.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_8/seminar_task_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_8/seminar_task_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_8/seminar_task_4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_8/seminar_task_5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_8/table.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_8/table_4.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_8/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/.idea/csv-editor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/.idea/seminar_9.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/TEST_FILE.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/TEST_FILE_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/def_kj.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/homework_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/homework_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/inner.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/input_data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/oleg3000.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/pppp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/results.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/task_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/task_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/task_4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/task_5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/seminar/seminar_9/test_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/банкомат/ATM.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/банкомат/description.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/банкомат/information_about_user.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/банкомат/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/примеры декораторов/decorator_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/примеры декораторов/decorator_2.py" afterDir="false" />
+    <list default="true" id="02320992-42e4-4c81-8cec-778059759b37" name="Changes" comment="Flask, seminar 2, task 4">
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/task_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_11_2024_13_14_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_11_2024_13_14__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_1/task_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar_1/task_4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_1/templates/show_if.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar_1/templates/show_if.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_1/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar_1/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s10/task_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s10/task_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s10/task_3_my.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s10/task_4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s10/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s11/task_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s11/task_1_my.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s11/task_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s11/task_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s11/task_3_my.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s11/task_4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s11/task_4_my.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s11/task_5.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s11/task_5_my.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s11/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s12/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s13/chat.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s13/data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s13/excep.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s13/exceptions_for_1_task.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s13/karma.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s13/out_file.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s13/task_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s13/task_1_my.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s13/task_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s13/task_2_my.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s13/task_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s13/task_3_my.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s13/task_4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s13/task_4_my.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s13/task_5.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s13/task_5_my.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s13/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s14/aboba.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s14/task_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s14/task_1_my.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s14/task_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s14/task_2_my.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s14/task_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s14/task_3_my.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s14/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s14/test_for_task_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s14/test_for_task_1_my.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s14/test_for_task_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s14/test_for_task_2_my.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s14/test_for_task_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s14/test_for_task_3_my.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s15/data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s15/errors_from_chat.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s15/file_name.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s15/result.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s15/task_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s15/task_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s15/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s7/NAME_NEW.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s7/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s7/home_work_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s7/new_dir/NAME_NEW.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s7/new_dir/new_file.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s7/new_dir/new_file1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s7/new_dir/new_file2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s7/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s7/test_folder/new_file_001..txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s7/test_folder/new_file_002..txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s7/test_folder/new_file_003..txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_work/home_work_s7/test_folder/new_file_004..txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_10/OOP.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_10/OOP_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_10/task_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_10/task_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_10/task_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_10/task_4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_10/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_11/info_about_orders.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_11/library.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_11/market.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_11/task_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_11/task_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_11/task_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_11/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_11/warehouse.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_12/json_result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_12/task_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_12/task_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_12/task_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_12/task_4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_12/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_13/file.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_13/task_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_13/task_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_13/task_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_13/task_4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_13/task_5.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_13/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_14/task_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_14/task_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_14/task_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_14/task_4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_14/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_15/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_7/data_task_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_7/data_task_2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_7/data_task_3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_7/data_task_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_7/seminar_task_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_7/seminar_task_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_7/seminar_task_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_7/seminar_task_4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_8/file.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_8/json_task_4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_8/seminar_task_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_8/seminar_task_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_8/seminar_task_4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_8/seminar_task_5.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_8/table.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_8/table_4.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_8/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/.idea/csv-editor.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/.idea/seminar_9.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/TEST_FILE.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/TEST_FILE_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/def_kj.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/homework_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/homework_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/inner.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/input_data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/oleg3000.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/pppp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/results.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/task_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/task_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/task_4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/task_5.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar/seminar_9/test_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/банкомат/ATM.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/банкомат/description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/банкомат/information_about_user.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/банкомат/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/примеры декораторов/decorator_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/примеры декораторов/decorator_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/my_project_1/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/my_project_1/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/task_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/task_4.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -331,6 +24,7 @@
       <list>
         <option value="Python Unit Test" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -372,6 +66,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "AutoHotkey.HotKeyPC.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
     "Python tests.Doctest via pytest in task_3_my.py.executor": "Run",
     "Python tests.Doctest via pytest in who_likes_it.py.executor": "Run",
     "Python tests.pytest in task_1.py.executor": "Run",
@@ -405,28 +100,6 @@
       </switches>
       <method v="2" />
     </configuration>
-    <configuration name="pytest in task_1.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="GeekBrains" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GB_Flask/seminar_2" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/GB_Flask/seminar_2/task_1.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python tests.pytest in task_1.py" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -484,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730623572737</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Flask, seminar 2, task 4">
+      <option name="closed" value="true" />
+      <created>1730745905967</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730745905967</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -507,6 +188,7 @@
     <MESSAGE value="15 семинар 2.0 Последний коммит" />
     <MESSAGE value="Flask start, 1 seminar, Version: 1.0" />
     <MESSAGE value="1 seminar, task 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="1 seminar, task 4" />
+    <MESSAGE value="Flask, seminar 2, task 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Flask, seminar 2, task 4" />
   </component>
 </project>

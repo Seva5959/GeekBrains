@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<h2>site designed by Vsevolod Gun</h2>
+<p> made with love</p>
+<table>
+    <tr>
+        <td> {{ head.firstname }}</td>
+        <td> {{ head.lastname }}</td>
+        <td> {{ head.age }}</td>
+        <td> {{ head.rating }}</td>
+    </tr>
+    {% for item in student_last %}
+    <tr>
+        <td> {{ item.firstname }}</td>
+        <td> {{ item.lastname }}</td>
+        <td> {{ item.age }}</td>
+        <td> {{ item.rating }}</td>
+    <tr>
+        {% endfor %}
+</table>
+</body>
+
+</html>
