@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Магазин одежды "Любовский" {% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/style_for_sites.css">
+</head>
+<body>
+
+
+<div class="class_section">
+        <a href="/" class='class_huge_txt'> Главная </a>
+        <a href="/pants" class='class_huge_txt'> Брюки </a>
+        <span class='class_huge_txt'> Обувь </span>
+        <span class='class_huge_txt'> Куртки </span>
+</div>
+
+<!-- Контент страницы -->
+<div class="main-content">
+    {% block content %}{% endblock %}
+</div>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2024 Магазин одежды "Любовский". Все права защищены.</p>
+        <div class="footer-links">
+            <a href="#">О нас</a>
+            <a href="#">Контакты</a>
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#">Условия использования</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

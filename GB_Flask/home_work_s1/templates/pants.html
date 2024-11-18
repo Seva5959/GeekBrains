@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ super() }} - Брюки
+{% endblock %}
+
+{% block content %}
+    <h2 class="class_big_txt">Широкий ассортимент брюк</h2>
+    {% for pant, pant_details in pants.items() %}
+        <p class="class_big_txt">{{ pant }}</p>
+        <img src="/static/image/{{ pant_details[0] }}" alt="{{ pant }}"
+             width="200" height="auto" style="border-radius:100px;"/>
+        <p class="class_big_txt">{{ pant_details[1].replace('\n', '<br>')|safe }} </p> <br>
+    {% endfor %}
+{% endblock %}

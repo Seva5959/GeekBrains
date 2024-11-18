@@ -1,0 +1,76 @@
+.class_rounded {
+            border-radius:100px;
+            position: absolute;
+            top: 175px;
+            right: 500px;
+        }
+        .class_LARGE_txt {
+        font-size: 50px;
+        margin: 0;
+        }
+
+.class_huge_txt {
+        font-size: 40px;
+        word-spacing: 30px;
+        margin: 0;
+        }
+
+.class_big_txt {
+        font-size: 20px;
+
+        }
+
+.class_header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+.class_section {
+            display: flex;
+        flex-direction: column; /* Элементы располагаются вертикально */
+        width: 200px; /* Ширина боковой панели */
+        background-color: #f4f4f4; /* Цвет фона для боковой панели */
+        padding: 20px; /* Отступы внутри панели */
+        position: fixed; /* Закрепим панель слева */
+        right: 0;
+        height: 100vh; /* Высота панели на весь экран */
+        }
+
+/* Стили для футера */
+html, body {
+    height: 100%; /* Убедитесь, что высота body и html растягивается на всю страницу */
+    margin: 0; /* Убираем отступы по умолчанию */
+}
+
+body {
+    display: flex; /* Включаем flex для body */
+    flex-direction: column; /* Контент будет идти сверху вниз */
+}
+
+.footer {
+    background-color: #333; /* Темный фон */
+    color: #fff; /* Белый текст */
+    padding: 20px; /* Отступы вокруг футера */
+    text-align: center; /* Центрируем текст */
+    margin-top: auto; /* Это заставит футер всегда быть внизу */
+}
+
+.footer-content {
+    max-width: 1200px; /* Ограничиваем максимальную ширину */
+    margin: 0 auto; /* Центрируем контент */
+}
+
+.footer-links {
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.footer-links a {
+    color: #fff; /* Белые ссылки */
+    margin: 0 10px; /* Отступы между ссылками */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
