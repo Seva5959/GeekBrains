@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}
+{{ super() }} - Обувь
+{% endblock %}
+
+{% block content %}
+    <h2 class="class_big_txt">Широкий ассортимент обуви</h2>
+    {% for foot, foot_des in foots.items() %}
+        <p class="class_big_txt">{{ pant }}</p>
+        <img src="/static/image/{{ foot_des[0] }}" alt="{{ foot }}"
+             width="200" height="auto" style="border-radius:100px;"/>
+        <p class="class_big_txt">{{ foot_des[1].replace('\n', '<br>')|safe }} </p> <br>
+    {% endfor %}
+{% endblock %}
+
+

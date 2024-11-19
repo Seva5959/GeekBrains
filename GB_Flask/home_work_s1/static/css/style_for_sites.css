@@ -1,12 +1,12 @@
 .class_rounded {
-            border-radius:100px;
+            border-radius:666px;
             position: absolute;
             top: 175px;
-            right: 500px;
+            right: 666px;
         }
         .class_LARGE_txt {
         font-size: 50px;
-        margin: 0;
+        margin-left: 555px;
         }
 
 .class_huge_txt {
@@ -29,12 +29,12 @@
 .class_section {
             display: flex;
         flex-direction: column; /* Элементы располагаются вертикально */
-        width: 200px; /* Ширина боковой панели */
+        width: 150px; /* Ширина боковой панели */
         background-color: #f4f4f4; /* Цвет фона для боковой панели */
         padding: 20px; /* Отступы внутри панели */
         position: fixed; /* Закрепим панель слева */
         right: 0;
-        height: 100vh; /* Высота панели на весь экран */
+        height: 84vh; /* Высота панели на весь экран */
         }
 
 /* Стили для футера */
@@ -74,3 +74,4 @@ body {
 .footer-links a:hover {
     text-decoration: underline; /* Подчеркивание при наведении */
 }
+

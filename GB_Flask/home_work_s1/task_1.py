@@ -22,12 +22,12 @@ def def_pants():
 
 @app.route('/footwear')
 def def_footwear():
-    return render_template('footwear.html')
+    return render_template('footwear.html', foots=footwear_data)
 
 
 @app.route('/jacket')
 def def_jacket():
-    return render_template('jacket.html')
+    return render_template('jacket.html', blazers=jacket_data)
 
 
 app.run(debug=True)

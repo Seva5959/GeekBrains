@@ -4,33 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02320992-42e4-4c81-8cec-778059759b37" name="Changes" comment="2 seminar, task 0">
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/css/style_for_sites.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/task_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/footwear.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/jacket.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/pants.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/primary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/test.py" afterDir="false" />
+    <list default="true" id="02320992-42e4-4c81-8cec-778059759b37" name="Changes" comment="Flask, seminar 2, task 4">
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/cat.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_1/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture_1/task_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_1/task_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture_1/task_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_1/task_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture_1/task_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_1/task_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture_1/task_4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_1/templates/show_if.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture_1/templates/show_if.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_1/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture_1/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_1/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture_1/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/static/image/foto.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture_2/static/image/foto.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture_2/task_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/task_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture_2/task_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/task_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture_2/task_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/task_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture_2/task_4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture_2/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture_2/templates/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture_2/templates/upload.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/uploads/foto_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture_2/uploads/foto_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/css/style_for_sites.css" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/css/style_for_sites.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/task_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/task_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/task_7.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/footwear.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/footwear.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/jacket.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/jacket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/primary.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/primary.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,18 +26,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Unit Test" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PUSH_TAGS">
-      <GitPushTagMode>
-        <option name="argument" value="--tags" />
-        <option name="title" value="All" />
-      </GitPushTagMode>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -108,7 +87,6 @@
     &quot;Python.wsgi.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/segyn/Downloads/intellij-rainbow-brackets-2024.2.6-241.zip&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
@@ -190,15 +168,7 @@
       <option name="project" value="LOCAL" />
       <updated>1730745905967</updated>
     </task>
-    <task id="LOCAL-00007" summary="2 seminar, task 0">
-      <option name="closed" value="true" />
-      <created>1731783391435</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1731783391438</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -222,7 +192,17 @@
     <MESSAGE value="Flask start, 1 seminar, Version: 1.0" />
     <MESSAGE value="1 seminar, task 4" />
     <MESSAGE value="Flask, seminar 2, task 4" />
-    <MESSAGE value="2 seminar, task 0" />
-    <option name="LAST_COMMIT_MESSAGE" value="2 seminar, task 0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Flask, seminar 2, task 4" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
