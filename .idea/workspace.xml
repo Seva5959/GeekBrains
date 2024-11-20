@@ -5,17 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02320992-42e4-4c81-8cec-778059759b37" name="Changes" comment="Flask, seminar 2, task 4">
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/cat.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/task_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/authorization.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/mathematics.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/page_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/writeline.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/css/style_for_sites.css" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/css/style_for_sites.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/task_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/task_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/task_7.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/footwear.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/footwear.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/jacket.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/jacket.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/primary.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/primary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/task_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/task_6.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_2/task_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture_2/task_4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/my_project_1/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/my_project_1/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

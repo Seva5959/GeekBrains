@@ -32,7 +32,7 @@ def table():
             'age': '23',
             'rating': '4.65'}]
 
-    return render_template('index.html', head=head, student_last=student_last)
+    return render_template('base.html', head=head, student_last=student_last)
 
 
 app.run(debug=True)

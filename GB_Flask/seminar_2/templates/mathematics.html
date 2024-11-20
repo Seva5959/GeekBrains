@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ task }}
+{% endblock %}
+
+{% block content %}
+<br>
+<form method="post">
+    <textarea name='num_1' placeholder="Write num 1" rows="3r" cols="5"></textarea>
+    <select name="oper">
+        <option value="+"> + </option>
+        <option value="-"> - </option>
+        <option value="/"> / </option>
+        <option value="*"> * </option>
+    </select>
+    <textarea name='num_2' placeholder="Write num 2" rows="3r" cols="5"></textarea>
+    <button> Calculate </button>
+    <p> Value = {{ final_number }}</p>
+</form>
+{% endblock %}
