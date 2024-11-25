@@ -54,9 +54,9 @@ def writeline():
 def mathematics():
     final_number = 0
     if request.method == "POST":
-        num_1 = int(request.form.get('num_1',0))
-        num_2 = int(request.form.get('num_2',0))
-        oper = request.form.get('oper','+')
+        num_1 = int(request.form.get('num_1', 0))
+        num_2 = int(request.form.get('num_2', 0))
+        oper = request.form.get('oper', '+')
         if oper == '+':
             final_number = num_1 + num_2
         elif oper == '-':
@@ -65,11 +65,27 @@ def mathematics():
             final_number = num_1 * num_2
         elif oper == '/':
             final_number = num_1 / num_2
+        elif oper == '^':
+            final_number = num_1 ** num_2
 
     context = {'task': 'Задание №5',
                'final_number': final_number}
     return render_template('mathematics.html', **context)
 
+
+@app.route('/validator', methods=['GET', 'POST'])
+def validator():
+    msg = None
+    flag = None
+    if request.method == 'POST':
+        age = int(request.form.get('age', 0))
+        if age < 18:
+            msg = f'Access is closed, wait another {18 - age} years!'
+            flag = False
+        else:
+            msg = "Access is allowed"
+            flag = True
+    return render_template('validator.html', msg=msg, flag=flag)
 
 
 app.run(debug=True)

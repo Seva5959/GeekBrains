@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ task }}
+{% endblock %}
+
+{% block content %}
+<br>
+<form method="post">
+    <h3>Confirm you age !</h3>
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="number" name="age" placeholder="Age" required>
+    <button> Send form </button>
+    {% if flag %}
+        <p> {{ msg }} </p>
+        <img src="/static/image/povestka.jpg" alt="повестка" >
+    {% elif flag == False %}
+        <p> {{ msg }} </p>
+    {%endif%}
+</form>
+{% endblock %}
