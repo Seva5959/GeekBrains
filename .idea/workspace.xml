@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02320992-42e4-4c81-8cec-778059759b37" name="Changes" comment="2 seminar, task 5">
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/classic.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/logo.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/palac.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/slimfit.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s2/task_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s2/templates/hello_user.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s2/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/static/image/povestka.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/validator.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/uploads/-_5.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/uploads/2024-11-20_182544500.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s15/Sapogi_Chehov.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/task_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/mathematics.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/mathematics.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +78,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/loha8/OneDrive/Рабочий стол/git-advanced-new",
+    "last_opened_file_path": "C:/Users/loha8/OneDrive/Рабочий стол/code_warse",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "two.files.diff.last.used.file": "C:/Users/loha8/OneDrive/Рабочий стол/GeekBrains/seminar_10/task_3"
   }
