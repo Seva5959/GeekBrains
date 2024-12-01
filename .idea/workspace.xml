@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02320992-42e4-4c81-8cec-778059759b37" name="Changes" comment="2 seminar, task 5">
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_3/task.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_3/task_1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotKey/HotKeyLaptop.ahk" beforeDir="false" afterPath="$PROJECT_DIR$/HotKey/HotKeyLaptop.ahk" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Unit Test" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -55,34 +58,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "AutoHotkey.HotKeyPC.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python tests.Doctest via pytest in task_3_my.py.executor": "Run",
-    "Python tests.Doctest via pytest in who_likes_it.py.executor": "Run",
-    "Python tests.pytest in task_1.py.executor": "Run",
-    "Python tests.pytest in task_12.py.executor": "Run",
-    "Python tests.pytest in test.py.executor": "Run",
-    "Python.Quitting_Smoking.executor": "Run",
-    "Python.aboba.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.task_1.executor": "Run",
-    "Python.task_2.executor": "Run",
-    "Python.task_3.executor": "Run",
-    "Python.task_4.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.who_likes_it.executor": "Run",
-    "Python.wsgi.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/loha8/OneDrive/Рабочий стол/code_warse",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "two.files.diff.last.used.file": "C:/Users/loha8/OneDrive/Рабочий стол/GeekBrains/seminar_10/task_3"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;AutoHotkey.HotKeyPC.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python tests.Doctest via pytest in task_3_my.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Doctest via pytest in who_likes_it.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest in task_1.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest in task_12.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest in test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Quitting_Smoking.executor&quot;: &quot;Run&quot;,
+    &quot;Python.aboba.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.task_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.task_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.task_3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.task_4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.who_likes_it.executor&quot;: &quot;Run&quot;,
+    &quot;Python.wsgi.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/loha8/OneDrive/Рабочий стол/code_warse&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/loha8/OneDrive/Рабочий стол/GeekBrains/seminar_10/task_3&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\loha8\OneDrive\Рабочий стол\GeekBrains\GB_Flask\seminar_2\static\image" />
