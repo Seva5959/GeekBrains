@@ -10,8 +10,10 @@ db.init_app(app)
 
 @app.cli.command('init-db') # Эта функция позволяет написать свою команду для терминала. Типо если написать flask --app 'путь к файлу ' 'имя функции'
 def init_db():
+    # Эта функция инициализирует таблицы, но если они уже существовали, но она ничего не делает
     db.create_all()
     print('OK')
+    # В этой функции мы не используем сессии, так как эта функция просто создает ТАБЛИЦЫ. Она НЕ трогает ДАННЫЕ.
 
 @app.cli.command('add_student')
 def addst():
@@ -29,5 +31,12 @@ def addst():
         )
         db.session.add(stud)
     db.session.commit()
+    # Сессии нужны ((( Без них к сожалению нельзя добавить данные. По сути они работают как git.
+    # Все что нужно добавляй (правда git add . нет), а в конце нужно сделать коммит
     print('Студенты добaвлены!')
 
+@app.route('/')
+def get_stedent():
+  # students_infa = Student.query.first() Позволил бы получить только первую запись из таблицы Student, иначе вернет None
+    students_infa = Student.query.all() # позволяет получить все записи из таблицы Student
+    return render_template('index.html', students=students_infa)
