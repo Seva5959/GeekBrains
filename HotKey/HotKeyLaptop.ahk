@@ -3,6 +3,10 @@
 SoundFileRu := A_ScriptDir . "\change_language_ru.mp3"
 SoundFileEn := A_ScriptDir . "\change_language_en.mp3"
 
++F9:: {
+    Run '"C:\Users\loha8\AppData\Local\Programs\Opera GX\launcher.exe" "https://github.com/Seva5959?tab=repositories"'
+}
+
 +F10:: {
     Run '"C:\Users\loha8\AppData\Local\Programs\Opera GX\launcher.exe" "https://chatgpt.com/?model=auto"'
 }
