@@ -2,7 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite///information.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mydatabase.db'
 db = SQLAlchemy()
 students_data = {
     # Направление "Him Bio"
@@ -45,7 +45,7 @@ class Schoolboy(db.Model):
     surename = db.Column(db.String(60), nullable=False)
     sex = db.Column(db.String(60), nullable=False)
     group = db.Column(db.String(60), nullable=False)
-    id_faculty = db.Column(db.Integer, db.ForeignKey('SchoolDirection'))
+    id_faculty = db.Column(db.Integer, db.ForeignKey('school_direction.id'))
 
     def __repr__(self):
         return f'{self.user_name} {self.surename}'
@@ -53,7 +53,6 @@ class Schoolboy(db.Model):
 class SchoolDirection(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name_faculty = db.Column(db.String, nullable=False)
-    id_for_relation = db.Column(db.Integer, nullable=False)
     post = db.relationship('Schoolboy', backref='SchoolDirection', lazy=True)
 
     def __repr__(self):
