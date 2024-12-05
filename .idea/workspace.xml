@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02320992-42e4-4c81-8cec-778059759b37" name="Changes" comment="2 seminar, task 5">
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/moodles.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/task_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/instance/mydatabase.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/modles.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar_3/modles.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HotKey/HotKeyLaptop.ahk" beforeDir="false" afterPath="$PROJECT_DIR$/HotKey/HotKeyLaptop.ahk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/task.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar_3/task.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar_3/task_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar_3/wsgi.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Unit Test" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>

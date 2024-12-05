@@ -1,3 +1,9 @@
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite///information.db'
+db = SQLAlchemy()
 students_data = {
     # Направление "Him Bio"
     'Him Bio': [
@@ -32,18 +38,23 @@ students_data = {
         {'username': 'Alexandra', 'surename': 'Yarovaya', 'sex': 'woman'}
     ]
 }
+sc_direction = {'Him Bio':1,'Soc Economy':2,'Fitz Math':3}
+class Schoolboy(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_name = db.Column(db.String(60), nullable=False)
+    surename = db.Column(db.String(60), nullable=False)
+    sex = db.Column(db.String(60), nullable=False)
+    group = db.Column(db.String(60), nullable=False)
+    id_faculty = db.Column(db.Integer, db.ForeignKey('SchoolDirection'))
 
-for i, sc_dir in enumerate(students_data, start=1):
-    for people in students_data[sc_dir]:
-        # print(i)
-        print(len(students_data[sc_dir]))
-        # # id = students_data[sc_dir]
-        # #
-        # # print(id)
-        # print(id)
-        # user_name=people['username']
-        # surename=people['surename']
-        # sex=people['sex']
-        # group = sc_dir
-        # print(sc_dir)
+    def __repr__(self):
+        return f'{self.user_name} {self.surename}'
 
+class SchoolDirection(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name_faculty = db.Column(db.String, nullable=False)
+    id_for_relation = db.Column(db.Integer, nullable=False)
+    post = db.relationship('Schoolboy', backref='SchoolDirection', lazy=True)
+
+    def __repr__(self):
+        return self.name_faculty
