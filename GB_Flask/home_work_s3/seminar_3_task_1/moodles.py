@@ -1,9 +1,8 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+import logging
 
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mydatabase.db'
-db = SQLAlchemy()
+sc_direction = {'Him Bio': 1, 'Soc Economy': 2, 'Fitz Math': 3}
 students_data = {
     # Направление "Him Bio"
     'Him Bio': [
@@ -38,7 +37,20 @@ students_data = {
         {'username': 'Alexandra', 'surename': 'Yarovaya', 'sex': 'woman'}
     ]
 }
-sc_direction = {'Him Bio':1,'Soc Economy':2,'Fitz Math':3}
+
+simple_logger = logging.getLogger('Логгер для функции create_bd')
+simple_logger.setLevel(logging.INFO)
+file_handler = logging.FileHandler('file_name.log', mode='w', encoding='utf-8')
+format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                           datefmt='%Y-%m-%d %H:%M:%S')
+file_handler.setFormatter(format)
+simple_logger.addHandler(file_handler)
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mydatabase.db'
+db = SQLAlchemy()
+
+
 class Schoolboy(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_name = db.Column(db.String(60), nullable=False)
@@ -49,6 +61,7 @@ class Schoolboy(db.Model):
 
     def __repr__(self):
         return f'{self.user_name} {self.surename}'
+
 
 class SchoolDirection(db.Model):
     id = db.Column(db.Integer, primary_key=True)

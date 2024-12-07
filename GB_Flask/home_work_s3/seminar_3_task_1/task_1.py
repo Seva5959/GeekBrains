@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from moodles import db, Schoolboy, SchoolDirection, students_data, sc_direction
+from moodles import db, Schoolboy, SchoolDirection, students_data, sc_direction, simple_logger
 import os
 
 app = Flask(__name__)
@@ -10,16 +10,14 @@ db.init_app(app)
 
 def create_bd():
     with app.app_context():
-        print("Данные подготовлены для записи.")
         if not os.path.exists('instance/information.db'):
             db.create_all()
-            print("Данные подготовлены для записи.")
-            for name_fac in sc_direction: # sc_direction -> dict
-                sc_dir = SchoolDirection(name=name_fac)
+            simple_logger.info("Созданы пустые таблицы")
+            for name_fac in sc_direction:  # sc_direction = dict
+                sc_dir = SchoolDirection(name_faculty=name_fac)
                 db.session.add(sc_dir)
-            print("Данные подготовлены для записи.")
-            for i, sc_dir in enumerate(students_data, start=1):
-                for j, people in enumerate(students_data[sc_dir], start=1):
+            for sc_dir in (students_data):  # везде убрал enumerate
+                for people in (students_data[sc_dir]):
                     educational = Schoolboy(
                         user_name=people['username'],
                         surename=people['surename'],
@@ -28,11 +26,13 @@ def create_bd():
                         id_faculty=sc_direction[sc_dir])
                     db.session.add(educational)
             db.session.commit()
+            simple_logger.info("База данных успешно заполнена")
         else:
-            print('База данных уже есть')
+            simple_logger.info("База данных уже существует")
 
 
 @app.route('/')
 def primary():
+    create_bd()
     educationals = Schoolboy.query.all()
     return render_template('index.html', educationals=educationals)
