@@ -5,23 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02320992-42e4-4c81-8cec-778059759b37" name="Changes" comment="2 seminar, task 5">
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/classic.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/logo.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/palac.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/slimfit.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s2/task_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s2/templates/hello_user.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work_s2/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/static/image/povestka.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/validator.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/uploads/-_5.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/uploads/2024-11-20_182544500.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/home_work/home_work_s15/Sapogi_Chehov.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/task_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/mathematics.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/mathematics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s3/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work_s3/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotKey/HotKeyPC.ahk" beforeDir="false" afterPath="$PROJECT_DIR$/HotKey/HotKeyPC.ahk" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,10 +20,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Unit Test" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -71,34 +62,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "AutoHotkey.HotKeyPC.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python tests.Doctest via pytest in task_3_my.py.executor": "Run",
-    "Python tests.Doctest via pytest in who_likes_it.py.executor": "Run",
-    "Python tests.pytest in task_1.py.executor": "Run",
-    "Python tests.pytest in task_12.py.executor": "Run",
-    "Python tests.pytest in test.py.executor": "Run",
-    "Python.Quitting_Smoking.executor": "Run",
-    "Python.aboba.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.task_1.executor": "Run",
-    "Python.task_2.executor": "Run",
-    "Python.task_3.executor": "Run",
-    "Python.task_4.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.who_likes_it.executor": "Run",
-    "Python.wsgi.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/loha8/OneDrive/Рабочий стол/git-advanced-new",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "two.files.diff.last.used.file": "C:/Users/loha8/OneDrive/Рабочий стол/GeekBrains/seminar_10/task_3"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;AutoHotkey.HotKeyPC.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python tests.Doctest via pytest in task_3_my.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Doctest via pytest in who_likes_it.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest in task_1.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest in task_12.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest in test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Quitting_Smoking.executor&quot;: &quot;Run&quot;,
+    &quot;Python.aboba.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.task_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.task_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.task_3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.task_4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.who_likes_it.executor&quot;: &quot;Run&quot;,
+    &quot;Python.wsgi.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/segyn/Desktop/restoring_Miku&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/loha8/OneDrive/Рабочий стол/GeekBrains/seminar_10/task_3&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\loha8\OneDrive\Рабочий стол\GeekBrains\GB_Flask\seminar_2\static\image" />
