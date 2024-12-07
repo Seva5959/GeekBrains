@@ -17,6 +17,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\python\банкомат\information_about_user.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>

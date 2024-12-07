@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    ds;kljlgsdjkgjkdsfkdsj
-    ds;kljlgsdjkgjkdsfkdsj
-    ds;kljlgsdjkgjkdsfkdsj
-    ds;kljlgsdjkgjkdsfkdsj
-    ds;kljlgsdjkgjkdsfkdsj
+{% for student in students %}
+    <p> Студент {{ student }}  из группы {{ student.group }} пол {{ student.sex }} </p>
+{% endfor %}
 </head>
 <body>
 
