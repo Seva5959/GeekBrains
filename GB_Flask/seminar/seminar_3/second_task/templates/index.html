@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+</head>
+<body>
+    <h2>Library Books</h2>
+    {% for book in books %}
+        <h3>{{ book.name_bk }} ({{ book.year }})</h3>
+        <p>Copies: {{ book.count }}</p>
+        <p>Authors:</p>
+        <ul>
+            {% for author in book.authors %}
+                <li>{{ author.name_au }} {{ author.surname_au }}</li>
+            {% endfor %}
+        </ul>
+        <hr>
+    {% endfor %}
+</body>
+</html>
