@@ -46,6 +46,7 @@ class SchoolBoy(db.Model):
     name_sb = db.Column(db.String(60), nullable=False)
     surname_sb = db.Column(db.String(60), nullable=False)
     sex_sb = db.Column(db.String(60), nullable=False)
+    group = db.Column(db.String(60), nullable=False)
 
     direction_id = db.Column(db.Integer, db.ForeignKey('school_direction.id_sd'), nullable=False)
     direction = db.relationship('SchoolDirection', backref='disciple') # проверить работу обратной ссылки disciple
@@ -66,11 +67,11 @@ class SchoolDirection(db.Model):
 
 class Grades(db.Model):
     id_g = db.Column(db.Integer, primary_key=True)
-    learner_id = db.Column(db.Ineger, db.ForeignKey('school_boy'),  nullable=False)
+    learner_id = db.Column(db.Integer, db.ForeignKey('school_boy.id_sb'),  nullable=False)
     learner = db.relationship('SchoolBoy', backref='learn')
 
-    mathematics = db.Column(db.Integer, nullale=False)
-    russian_language = db.Column(db.Integer, nullale=False)
-    physical_culture = db.Column(db.Integer, nullale=False)
-    direction_learner = db.Column(db.String, nullale=False)
+    mathematics = db.Column(db.Integer, nullable=False)
+    russian_language = db.Column(db.Integer, nullable=False)
+    physical_culture = db.Column(db.Integer, nullable=False)
+    direction_learner = db.Column(db.String, nullable=False)
 

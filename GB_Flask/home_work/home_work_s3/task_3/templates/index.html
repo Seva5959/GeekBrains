@@ -5,6 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-
+{% for i in range(students['name']|length) %}
+    <p> {{ students['name'][i] }}
+        {{ students['surname'][i] }} </p>
+    <ul>
+        <li> Mathematics: <b>{{ students['math'][i] }}</b> </li>
+        <li> Russian Language: <b>{{ students['russ'][i] }}</b> </li>
+        <li> Physical Culture: <b>{{ students['phys'][i] }}</b> </li>
+    </ul>
+<br>
+{% endfor %}
 </body>
 </html>
