@@ -5,6 +5,11 @@
     <title>Title</title>
 </head>
 <body>
+{% for educational in educationals %}
+    <p> {{ educational.user_name }} </p>
+    <p> {{ educational.group}} </p>
+<br>
+{% endfor %}
 
 </body>
 </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My sites</title>
+</head>
+<body>
+<form method="POST" action="{{ url_for('auth') }}">
+    {{forms.csrf_token}}
+    <h2> Registration </h2>
+    {% for elem in forms %}
+        <h6> {{ elem.label }} </h6>
+            {{ elem }}
+            {% if elem.errors %}
+            <ul class="alert alert-danger">
+                <li> {{ elem.errors }} </li>
+            </ul>
+            {% endif %}
+    {% endfor %}
+    <button type="submit"> Отправить </button>
+</form>
+</body>
+</html>
