@@ -5,7 +5,7 @@
     <title>My sites</title>
 </head>
 <body>
-<form method="POST" action="{{ url_for('auth') }}">
+<form method="POST" action="`{{ url_for('auth') }}">
     {{forms.csrf_token}}
     <h2> Registration </h2>
     {% for elem in forms %}
