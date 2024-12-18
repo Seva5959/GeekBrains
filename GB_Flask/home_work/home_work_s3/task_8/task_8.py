@@ -9,12 +9,15 @@ app.config['SECRET_KEY'] = 'mysecretkey'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users_base_data.db'
 csrf = CSRFProtect(app)
 db.init_app(app)
+
+
 @app.cli.command('init')
 def db_init():
     db.create_all()
     print('OK')
 
-@app.route('/', methods=["POST","GET"])
+
+@app.route('/', methods=["POST", "GET"])
 def regis():
     form = Valid_Auth()
     if request.method == 'POST' and form.validate():
@@ -25,8 +28,9 @@ def regis():
         user = User(name_us=name, surname_us=surname, email_us=email, password_us=password)
         db.session.add(user)
         db.session.commit()
-        return  render_template('succes.html', name=name, surname=surname)
+        return render_template('succes.html', name=name, surname=surname)
     return render_template('index.html', form=form)
+
 
 @app.route('/users')
 def get_users():

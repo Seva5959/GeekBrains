@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2> Добро пожаловать на лучший Задачник в Перми</h2> <br> <br>
+<p> Для использования полного функционала пройдите, пожалуйста, регистрацию</p>
+<br>
+<form method="POST" action="{{ url_for('regis') }}">
+    {{ forms.csrf_token }}
+    {% for form in forms %}
+        {% if form.name != 'csrf_token' and form.name != 'task'%}
+            {{ form.label }}<br>
+            {{ form }}<br>
+            {% if form.errors %}
+                <strong> {{ form.errors }} </strong>
+            {%endif%}
+        {%endif%}
+    {%endfor%}
+    <button type="submit">Отправить форму</button>
+</form>
+</body>
+</html>

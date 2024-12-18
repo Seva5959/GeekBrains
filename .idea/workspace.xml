@@ -5,20 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02320992-42e4-4c81-8cec-778059759b37" name="Changes" comment="2 seminar, task 5">
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/task_8.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/templates/succes.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/templates/users.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s4/task_1/task_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/form.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/primary.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/templates/main_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/templates/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/task_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/task_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/instance/users_base_data.db" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/instance/users_base_data.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/task_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/task_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/python_advensed/test_sites/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/python_advensed/test_sites/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/python_advensed/test_sites/style" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/python_advensed/test_sites/style" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/instance/users_base_data.db" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/instance/users_base_data.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/task_8.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/task_8.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +115,7 @@
       </switches>
       <method v="2" />
     </configuration>
-    <configuration name="BDSM" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="BD" type="PythonConfigurationType" factoryName="Python">
       <module name="GeekBrains" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -129,7 +128,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/wsgi.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GB_Flask/my_project/YouDo/wsgi.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -242,6 +241,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/GB_Flask/seminar/seminar_4/task_2.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
