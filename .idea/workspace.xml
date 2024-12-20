@@ -5,33 +5,151 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02320992-42e4-4c81-8cec-778059759b37" name="Changes" comment="2 seminar, task 5">
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_1/file_name.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/instance/users_base_data.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/modles.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/task_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_3/instance/users_base_data.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_3/modles.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_3/task_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_3/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_3/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/instance/users_base_data.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/task_8.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/templates/succes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s4/task_1/nabor_sites_task_1/threading_app_fengmyshui_com.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s4/task_1/nabor_sites_task_1/threading_chatgpt_com.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s4/task_1/nabor_sites_task_1/threading_github_com_Seva5959.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s4/task_1/nabor_sites_task_1/threading_mail_google_com.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s4/task_1/nabor_sites_task_1/threading_youtube_com.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s4/task_1/task_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/form.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/instance/tasks.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/primary.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/templates/main_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/templates/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/python_advensed/test_sites/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/python_advensed/test_sites/style" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/second_task/instance/MyBooks.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/second_task/task_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/second_task/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/third_task/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/third_task/instance/users_base_data.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/third_task/modles.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/third_task/task_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/third_task/templates/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/third_task/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/nabor_sites_task_1/threading_app_fengmyshui_com.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/nabor_sites_task_1/threading_chatgpt_com.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/nabor_sites_task_1/threading_github_com_Seva5959.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/nabor_sites_task_1/threading_mail_google_com.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/nabor_sites_task_1/threading_youtube_com.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/task_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/task_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/task_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s3/task_1/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work_s3/task_1/task_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/instance/mydatabase.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/modles.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/second_task/instance/MyBooks.db" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar_3/second_task/instance/MyBooks.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/second_task/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar_3/second_task/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/task.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/task_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/css/style_for_sites.css" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/css/style_for_sites.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/classic.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/classic.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/leatherboots.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/leatherboots.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/leatherjacket.webp" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/leatherjacket.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/logo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/palac.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/palac.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/raincoat.webp" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/raincoat.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/slimfit.webp" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/slimfit.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/sneakers.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/sneakers.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/sports_shoes.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/sports_shoes.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/winterjacket.webp" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/winterjacket.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/task_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/task_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/task_6.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/task_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/task_7.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/footwear.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/templates/footwear.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/jacket.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/templates/jacket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/pants.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/templates/pants.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/primary.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/templates/primary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s2/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s2/task_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s2/templates/hello_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s2/templates/hello_user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s2/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s2/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/file_name.log" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/везде flask init нужно писать" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/instance/mydatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_1/instance/mydatabase.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/moodles.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_1/moodles.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_1/task_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_1/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_1/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s3/task_1/modles.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/разбираем базы данных.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s3/task_1/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/не запускается task_html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s3/task_1/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/templates/users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_1/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_1/task_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_1/task_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_1/task_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_1/task_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_1/task_3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_1/task_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_1/task_4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_1/templates/show_if.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_1/templates/show_if.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_1/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_1/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_1/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_1/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_2/static/image/foto.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_2/static/image/foto.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_2/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_2/task_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_2/task_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_2/task_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_2/task_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_2/task_3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_2/task_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_2/task_4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_2/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_2/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_2/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_2/templates/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_2/templates/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_2/templates/upload.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_2/uploads/foto_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_2/uploads/foto_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/my_project_1/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/python_advensed/my_project_1/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/my_project_1/static/foto.webp" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/python_advensed/my_project_1/static/foto.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/my_project_1/static/foto_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/python_advensed/my_project_1/static/foto_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/my_project_1/static/foto_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/python_advensed/my_project_1/static/foto_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/my_project_1/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/python_advensed/my_project_1/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/my_project_1/templates/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/python_advensed/my_project_1/templates/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/static/image/povestka.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/static/image/povestka.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/task_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/authorization.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/templates/authorization.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/mathematics.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/templates/mathematics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/page_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/templates/page_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/validator.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/templates/validator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/writeline.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/templates/writeline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/uploads/-_5.docx" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/uploads/-_5.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/uploads/2024-11-20_182544500.png" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/uploads/2024-11-20_182544500.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/first_task/modles.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/first_task/modles.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/first_task/task.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/first_task/task.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/first_task/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/first_task/task_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/first_task/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/first_task/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/first_task/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/first_task/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/instance/mydatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar_3/instance/mydatabase.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/second_task/instance/MyBooks.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/second_task/moodles.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/second_task/moodles.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/second_task/task_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/second_task/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/second_task/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/second_task/wsgi.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager">
-    <option name="groupingKeys">
-      <option value="directory" />
-    </option>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Unit Test" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -72,37 +190,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;AutoHotkey.HotKeyPC.executor&quot;: &quot;Run&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Python tests.Doctest via pytest in task_3_my.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Doctest via pytest in who_likes_it.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest in task_1.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest in task_12.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest in test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Quitting_Smoking.executor&quot;: &quot;Run&quot;,
-    &quot;Python.aboba.executor&quot;: &quot;Run&quot;,
-    &quot;Python.first bd.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.moodles.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task_1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task_2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task_3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task_4.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.who_likes_it.executor&quot;: &quot;Run&quot;,
-    &quot;Python.wsgi.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/segyn/PycharmProjects/GeekBrains/GB_Flask/home_work_s3/seminar_3_task_1&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/loha8/OneDrive/Рабочий стол/GeekBrains/seminar_10/task_3&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "AutoHotkey.HotKeyPC.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Python tests.Doctest via pytest in task_3_my.py.executor": "Run",
+    "Python tests.Doctest via pytest in who_likes_it.py.executor": "Run",
+    "Python tests.pytest in task_1.py.executor": "Run",
+    "Python tests.pytest in task_12.py.executor": "Run",
+    "Python tests.pytest in test.py.executor": "Run",
+    "Python.Quitting_Smoking.executor": "Run",
+    "Python.aboba.executor": "Run",
+    "Python.first bd.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.task_1.executor": "Run",
+    "Python.task_2.executor": "Run",
+    "Python.task_3.executor": "Run",
+    "Python.task_4.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.who_likes_it.executor": "Run",
+    "Python.wsgi.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Merging master",
+    "last_opened_file_path": "C:/Users/loha8/OneDrive/Рабочий стол/GeekBrains/GB_Flask/home_work/home_work_s3/task_8/wsgi.py",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "two.files.diff.last.used.file": "C:/Users/loha8/OneDrive/Рабочий стол/GeekBrains/seminar_10/task_3"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\loha8\OneDrive\Рабочий стол\GeekBrains\GB_Flask\seminar_2\static\image" />
@@ -118,7 +235,7 @@
       </switches>
       <method v="2" />
     </configuration>
-    <configuration name="first bd" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="BD" type="PythonConfigurationType" factoryName="Python">
       <module name="GeekBrains" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -127,12 +244,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.12" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\segyn\PycharmProjects\GeekBrains\GB_Flask\home_work_s3\seminar_3_task_1" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/wsgi.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GB_Flask/my_project/YouDo/wsgi.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -245,6 +361,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/GB_Flask/seminar/seminar_4/task_2.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">

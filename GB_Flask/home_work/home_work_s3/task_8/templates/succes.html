@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2> Поздравляем {{ name }} {{ surname }}. Вы успешно прошли регистрацию!</h2>
+<br>
+<br>
+<br>
+<form method="GET" action="{{ url_for('get_users') }}">
+    <button type="submit"> Посмотреть список авторизованных пользователей </button>
+</form>
+</body>
+</html>

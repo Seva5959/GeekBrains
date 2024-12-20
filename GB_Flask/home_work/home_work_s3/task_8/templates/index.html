@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+</head>
+<body>
+<form method="POST" action="{{ url_for('regis') }}">
+    {{form.csrf_token}}
+    {%for field in form %}
+        {% if field.name != 'csrf_token' %}
+            {{ field.label }} <br>
+            {{ field }} <br>
+        {%endif%}
+    {%endfor%}
+    <button type="submit"> Отправить </button>
+</form>
+</body>
+</html>
