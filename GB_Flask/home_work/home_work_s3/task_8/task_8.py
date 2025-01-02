@@ -1,6 +1,6 @@
 from werkzeug.security import generate_password_hash
 from flask import Flask, render_template, request
-from flask_wtf import CSRFProtect
+from flask_wtf import CSRFProtectrequest
 from models import db, User
 from forms import Valid_Auth
 

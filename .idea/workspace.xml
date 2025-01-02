@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02320992-42e4-4c81-8cec-778059759b37" name="Changes" comment="2 seminar, task 5">
-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s4/task_1/task_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/form.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/primary.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/templates/main_page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/templates/task.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/task_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/task_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotKey/HotKeyLaptopFF.ahk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/instance/users_base_data.db" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/instance/users_base_data.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/task_8.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/task_8.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotKey/HotKeyLaptop.ahk" beforeDir="false" afterPath="$PROJECT_DIR$/HotKey/HotKeyLaptopOG.ahk" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +86,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/loha8/OneDrive/Рабочий стол/GeekBrains/GB_Flask/home_work/home_work_s3/task_8/wsgi.py&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/loha8/OneDrive/Рабочий стол/gan&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/loha8/OneDrive/Рабочий стол/GeekBrains/seminar_10/task_3&quot;
   }

@@ -68,4 +68,13 @@ F12::Return
     Send "^{PgDn}"  ; Отправляем Ctrl + Page Down для переключения на следующую вкладку
 }
 
+; Навигация назад (Caps Lock Left)
+CapsLock & Left:: {
+    Send "!{Left}"
+}
+
+; Навигация вперед (Caps Lock Right)
+CapsLock & Right:: {
+    Send "!{Right}"
+}
 #HotIf
