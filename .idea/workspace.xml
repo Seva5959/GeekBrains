@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02320992-42e4-4c81-8cec-778059759b37" name="Changes" comment="2 seminar, task 5">
-      <change afterPath="$PROJECT_DIR$/HotKey/HotKeyLaptopFF.ahk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/task_8.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/task_8.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HotKey/HotKeyLaptop.ahk" beforeDir="false" afterPath="$PROJECT_DIR$/HotKey/HotKeyLaptopOG.ahk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
