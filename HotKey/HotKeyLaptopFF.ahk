@@ -66,7 +66,36 @@ CapsLock & Right:: {
     Send "!{Right}"
 }
 
+; Переменная для отслеживания состояния "зажатия" клавиши Ё
+global IsTabGrabbed := false
 
+; При нажатии Ё "зажимается" текущая вкладка
+`:: {
+    global IsTabGrabbed  ; Явно указываем, что используем глобальную переменную
+    IsTabGrabbed := !IsTabGrabbed  ; Переключаем состояние
+    if (IsTabGrabbed) {
+        SoundBeep(1000)  ; Звук для индикации активации
+    } else {
+        SoundBeep(500)   ; Звук для индикации деактивации
+    }
+}
+
+; Если вкладка "зажата", стрелки перемещают её
+Left:: {
+    global IsTabGrabbed  ; Явно указываем, что используем глобальную переменную
+    if (IsTabGrabbed) {
+        Send("^+{PgUp}")  ; Ctrl + Shift + PageUp перемещает вкладку влево
+    }
+    return
+}
+
+Right:: {
+    global IsTabGrabbed  ; Явно указываем, что используем глобальную переменную
+    if (IsTabGrabbed) {
+        Send("^+{PgDn}")  ; Ctrl + Shift + PageDown перемещает вкладку вправо
+    }
+    return
+}
 
 
 #HotIf
