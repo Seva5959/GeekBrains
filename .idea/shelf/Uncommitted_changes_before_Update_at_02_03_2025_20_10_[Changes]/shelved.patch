@@ -1,0 +1,1055 @@
+Index: who_likes_it.py
+===================================================================
+diff --git a/who_likes_it.py b/who_likes_it.py
+deleted file mode 100644
+--- a/who_likes_it.py	(revision 0752c366357c618795634f9a584b23248145910a)
++++ /dev/null	(revision 0752c366357c618795634f9a584b23248145910a)
+@@ -1,29 +0,0 @@
+-def likes(names):
+-    """
+-    
+-    Возвращает строку с информацией о том, кто лайкнул пост.
+-
+-    >>> likes([])
+-    'no one likes this'
+-    >>> likes(['Alice'])
+-    'Alice likes this'
+-    >>> likes(['Alice', 'Bob'])
+-    'Alice and Bob like this'
+-    >>> likes(['Alice', 'Bob', 'Charlie'])
+-    'Alice, Bob and Charlie like this'
+-    >>> likes(['Alice', 'Bob', 'Charlie', 'Dave'])
+-    'Alice, Bob and 2 others like this' """
+-
+-    if len(names) == 0:
+-        return "no one likes this"
+-    elif len(names) == 1:
+-        return f"{names[0]} likes this"
+-    elif len(names) == 2:
+-        return f"{names[0]} and {names[1]} like this"
+-    elif len(names) == 3:
+-        return f"{names[0]}, {names[1]} and {names[2]} like this"
+-    else:
+-        return f"{names[0]}, {names[1]} and {len(names) - 2} others like this"
+-
+-
+-print(likes([]))
+Index: GB_Remember/lecture/lecture_2/task_1.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GB_Remember/lecture/lecture_2/task_1.py b/GB_Remember/lecture/lecture_2/task_1.py
+new file mode 100644
+--- /dev/null	(date 1740928226692)
++++ b/GB_Remember/lecture/lecture_2/task_1.py	(date 1740928226692)
+@@ -0,0 +1,16 @@
++from flask import Flask, url_for
++from markupsafe import escape
++
++app = Flask(__name__)
++
++@app.route('/<path:file>/')
++def get_file(file):
++    return f'Ваш файл находиться в: {escape(file)}'
++
++
++@app.route('/test_url_for/<int:num>/')
++def test_url(num):
++    text = f'Функция '
++    return text
++
++app.run(debug=True)
+Index: GB_Remember/lecture/lecture_2/task_2.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GB_Remember/lecture/lecture_2/task_2.py b/GB_Remember/lecture/lecture_2/task_2.py
+new file mode 100644
+--- /dev/null	(date 1740928226692)
++++ b/GB_Remember/lecture/lecture_2/task_2.py	(date 1740928226692)
+@@ -0,0 +1,16 @@
++from flask import Flask, render_template
++app = Flask(__name__)
++
++@app.route('/')  # Обработчик для главной страницы
++def home():
++    return "Привет, это главная страница Flask!"
++@app.route('/about/')
++def about():
++    con = {
++        'title':'Обо мне',
++        'name':'Всеволод',
++        'age':'19'
++    }
++    return render_template('about.html', **con)
++
++app.run(debug=True)
+\ No newline at end of file
+Index: GB_Remember/lecture/lecture_2/task_3.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GB_Remember/lecture/lecture_2/task_3.py b/GB_Remember/lecture/lecture_2/task_3.py
+new file mode 100644
+--- /dev/null	(date 1740928226692)
++++ b/GB_Remember/lecture/lecture_2/task_3.py	(date 1740928226692)
+@@ -0,0 +1,14 @@
++from flask import Flask, request, render_template
++
++app = Flask(__name__)
++
++@app.get('/submit')
++def sub_get():
++    return render_template('form.html')
++
++@app.post('/submit')
++def sub_post():
++    name = request.form.get('name')
++    return f'Hello {name}!'
++
++app.run(debug=True)
+\ No newline at end of file
+Index: GB_Remember/lecture/lecture_2/task_33.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GB_Remember/lecture/lecture_2/task_33.py b/GB_Remember/lecture/lecture_2/task_33.py
+new file mode 100644
+--- /dev/null	(date 1740928226693)
++++ b/GB_Remember/lecture/lecture_2/task_33.py	(date 1740928226693)
+@@ -0,0 +1,20 @@
++from flask import Flask, render_template, request
++
++app = Flask(__name__)
++
++
++@app.route('/authorization', methods=['POST', 'GET'])
++def auth():
++    login = {'true_login': 'seva5959',
++             'true_password': '1234'}
++
++    if request.method == 'POST':
++        user_email = request.form.get('user_email')
++        user_passw = request.form.get('user_passw')
++        if user_email == login['true_login'] and user_passw == login['true_password']:
++            return 'Авторизация прошла успешно!'
++        return render_template('mistake.html')
++    return render_template('auth.html')
++
++
++app.run(debug=True)
+Index: GB_Remember/lecture/lecture_2/task_4.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GB_Remember/lecture/lecture_2/task_4.py b/GB_Remember/lecture/lecture_2/task_4.py
+new file mode 100644
+--- /dev/null	(date 1740928226693)
++++ b/GB_Remember/lecture/lecture_2/task_4.py	(date 1740928226693)
+@@ -0,0 +1,17 @@
++# Задание №4
++# 📌 Создать страницу, на которой будет форма для ввода текста и
++# кнопка "Отправить"
++# 📌 При нажатии кнопки будет произведен подсчет количества слов
++# в тексте и переход на страницу с результатом
++
++from flask import Flask, request, render_template
++app = Flask(__name__)
++
++@app.route('/sub', methods=['POST','GET'])
++def sub():
++    if request.method == 'POST':
++        txt = request.form.get('user_txt')
++        return render_template('counting.html', txt=txt, len_txt=len(txt))
++    return render_template('main.html')
++
++app.run(debug=True)
+\ No newline at end of file
+Index: GB_Remember/lecture/lecture_2/task_5.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GB_Remember/lecture/lecture_2/task_5.py b/GB_Remember/lecture/lecture_2/task_5.py
+new file mode 100644
+--- /dev/null	(date 1740928226694)
++++ b/GB_Remember/lecture/lecture_2/task_5.py	(date 1740928226694)
+@@ -0,0 +1,62 @@
++# Задание №5
++# 📌 Создать страницу, на которой будет форма для ввода двух
++# чисел и выбор операции (сложение, вычитание, умножение
++# или деление) и кнопка "Вычислить"
++# 📌 При нажатии на кнопку будет произведено вычисление
++# результата выбранной операции и переход на страницу с
++# результатом.
++
++from flask import Flask, request, render_template
++
++app = Flask(__name__)
++
++@app.route('/math', methods=['POST','GET'])
++def calk():
++    if request.method == 'POST':
++        oper = request.form.get('operation')
++        int_1 = request.form.get('int_1')
++        int_2 = request.form.get('int_2')
++        if oper == '+':
++            rez = int(int_1) + int(int_2)
++        elif oper == '*':
++            rez = int(int_1) * int(int_2)
++        elif oper == '/':
++            rez = int(int_1) / int(int_2)
++        else:
++            rez = int(int_1) - int(int_2)
++        return render_template('rezult.html', rez=rez, int_1=int_1, int_2=int_2, oper=oper)
++    return render_template('interface.html')
++
++app.run(debug=True)
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+Index: GB_Remember/lecture/lecture_2/task_6.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GB_Remember/lecture/lecture_2/task_6.py b/GB_Remember/lecture/lecture_2/task_6.py
+new file mode 100644
+--- /dev/null	(date 1740928226694)
++++ b/GB_Remember/lecture/lecture_2/task_6.py	(date 1740928226694)
+@@ -0,0 +1,21 @@
++# Задание №6
++# 📌 Создать страницу, на которой будет форма для ввода имени
++# и возраста пользователя и кнопка "Отправить"
++# 📌 При нажатии на кнопку будет произведена проверка
++# возраста и переход на страницу с результатом или на
++# страницу с ошибкой в случае некорректного возраста.
++
++from flask import Flask, request, render_template
++
++app = Flask(__name__)
++
++@app.route('/cheak', methods=['POST', 'GET'])
++def cheak():
++    if request.method == 'POST':
++        age = request.form.get('age')
++        if int(age) < 18:
++            return f'Нужно подождать еще {18-int(age)} лет'
++        return render_template('seckret.html')
++    return render_template('index.html')
++
++app.run(debug=True)
+\ No newline at end of file
+Index: GB_Remember/lecture/lecture_2/templates/about.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GB_Remember/lecture/lecture_2/templates/about.html b/GB_Remember/lecture/lecture_2/templates/about.html
+new file mode 100644
+--- /dev/null	(date 1740928226694)
++++ b/GB_Remember/lecture/lecture_2/templates/about.html	(date 1740928226694)
+@@ -0,0 +1,11 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>{{ title }}</title>
++</head>
++<body>
++    <h1> Привет, меня зовут {{ name }}, мне {{ age }} лет. </h1>
++    <p class="alert-dark"> Все права защищены &copy;</p>
++</body>
++</html>
+\ No newline at end of file
+Index: GB_Remember/lecture/lecture_2/templates/auth.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GB_Remember/lecture/lecture_2/templates/auth.html b/GB_Remember/lecture/lecture_2/templates/auth.html
+new file mode 100644
+--- /dev/null	(date 1740928226694)
++++ b/GB_Remember/lecture/lecture_2/templates/auth.html	(date 1740928226694)
+@@ -0,0 +1,15 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>Title</title>
++</head>
++<body>
++<form method="post">
++    <input type="text" name="user_email" placeholder="почта">
++    <input type="password" name="user_passw" placeholder="пароль">
++    <input type="submit" value="Послать">
++</form>
++
++</body>
++</html>
+\ No newline at end of file
+Index: GB_Remember/lecture/lecture_2/templates/counting.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GB_Remember/lecture/lecture_2/templates/counting.html b/GB_Remember/lecture/lecture_2/templates/counting.html
+new file mode 100644
+--- /dev/null	(date 1740928226695)
++++ b/GB_Remember/lecture/lecture_2/templates/counting.html	(date 1740928226695)
+@@ -0,0 +1,12 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>Title</title>
++</head>
++<body>
++    <p>Ваш текст: {{ txt }}</p>
++    <p>Длина текста: {{ len_txt }}</p>
++    <a href="/sub">Вести текст заново</a>
++</body>
++</html>
+\ No newline at end of file
+Index: GB_Remember/lecture/lecture_2/templates/form.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GB_Remember/lecture/lecture_2/templates/form.html b/GB_Remember/lecture/lecture_2/templates/form.html
+new file mode 100644
+--- /dev/null	(date 1740928226695)
++++ b/GB_Remember/lecture/lecture_2/templates/form.html	(date 1740928226695)
+@@ -0,0 +1,13 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>Форма для Post запроса</title>
++</head>
++<body>
++    <form action="/submit" method="post">
++        <input type="text" name="name" placeholder="Позывной">
++        <input type="submit" value="Отправить">
++    </form>
++</body>
++</html>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AhkProjectSettings\">\r\n    <option name=\"defaultAhkSdk\" value=\"AutoHotkey v2.0.18\" />\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.11\" project-jdk-type=\"Python SDK\" />\r\n  <component name=\"PyCharmProfessionalAdvertiser\">\r\n    <option name=\"shown\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PyPackaging\">\r\n    <option name=\"earlyReleasesAsUpgrades\" value=\"true\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 0752c366357c618795634f9a584b23248145910a)
++++ b/.idea/misc.xml	(date 1740928240320)
+@@ -3,7 +3,7 @@
+   <component name="AhkProjectSettings">
+     <option name="defaultAhkSdk" value="AutoHotkey v2.0.18" />
+   </component>
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11" project-jdk-type="Python SDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (pythonProject1)" project-jdk-type="Python SDK" />
+   <component name="PyCharmProfessionalAdvertiser">
+     <option name="shown" value="true" />
+   </component>
+Index: GB_Remember/lecture/lecture_2/templates/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GB_Remember/lecture/lecture_2/templates/index.html b/GB_Remember/lecture/lecture_2/templates/index.html
+new file mode 100644
+--- /dev/null	(date 1740928226695)
++++ b/GB_Remember/lecture/lecture_2/templates/index.html	(date 1740928226695)
+@@ -0,0 +1,14 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>Title</title>
++</head>
++<body>
++<p>Здравствуйте, уважаемый пользователь! Чтобы получить интересующую вас информацию, необходимо подтвердить возраст</p>
++<form method="post">
++    <input type="number" name="age" step="1" >
++    <button>Подтвердить</button>
++</form>
++</body>
++</html>
+\ No newline at end of file
+Index: GB_Remember/lecture/lecture_2/templates/interface.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GB_Remember/lecture/lecture_2/templates/interface.html b/GB_Remember/lecture/lecture_2/templates/interface.html
+new file mode 100644
+--- /dev/null	(date 1740928226696)
++++ b/GB_Remember/lecture/lecture_2/templates/interface.html	(date 1740928226696)
+@@ -0,0 +1,20 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>Калькулятор</title>
++</head>
++<body>
++<form method="post">
++    <input type="number" name="int_1" step="1">
++    <select name="operation">
++        <option value='+' selected> +</option>
++        <option value='-'> -</option>
++        <option value='/'> /</option>
++        <option value='*'> *</option>
++    </select>
++    <input type="number" name="int_2" step="1">
++    <button> Отправить</button>
++</form>
++</body>
++</html>
+\ No newline at end of file
+Index: GB_Remember/lecture/lecture_2/templates/main.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GB_Remember/lecture/lecture_2/templates/main.html b/GB_Remember/lecture/lecture_2/templates/main.html
+new file mode 100644
+--- /dev/null	(date 1740928226696)
++++ b/GB_Remember/lecture/lecture_2/templates/main.html	(date 1740928226696)
+@@ -0,0 +1,13 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>Title</title>
++</head>
++<body>
++<form method="POST">
++    <input type="text" name="user_txt" placeholder="Write your message">
++    <button> Отправить </button>
++</form>
++</body>
++</html>
+\ No newline at end of file
+Index: GB_Remember/lecture/lecture_2/templates/mistake.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GB_Remember/lecture/lecture_2/templates/mistake.html b/GB_Remember/lecture/lecture_2/templates/mistake.html
+new file mode 100644
+--- /dev/null	(date 1740928226696)
++++ b/GB_Remember/lecture/lecture_2/templates/mistake.html	(date 1740928226696)
+@@ -0,0 +1,12 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>Title</title>
++</head>
++<body>
++<p>Неправильный логин или пароль</p>
++<p>Вести заново данные <a href="authorization">можно здесь</a> </p>
++
++</body>
++</html>
+\ No newline at end of file
+Index: GB_Remember/lecture/lecture_2/templates/rezult.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GB_Remember/lecture/lecture_2/templates/rezult.html b/GB_Remember/lecture/lecture_2/templates/rezult.html
+new file mode 100644
+--- /dev/null	(date 1740928226696)
++++ b/GB_Remember/lecture/lecture_2/templates/rezult.html	(date 1740928226696)
+@@ -0,0 +1,11 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>Title</title>
++</head>
++<body>
++<h2>{{ int_1 }} {{ oper }} {{ int_2 }} = {{ rez }} </h2>
++<a href="/math"> <h3>Вернуться обратно</h3></a>
++</body>
++</html>
+\ No newline at end of file
+Index: GB_Remember/lecture/lecture_2/templates/seckret.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GB_Remember/lecture/lecture_2/templates/seckret.html b/GB_Remember/lecture/lecture_2/templates/seckret.html
+new file mode 100644
+--- /dev/null	(date 1740928226697)
++++ b/GB_Remember/lecture/lecture_2/templates/seckret.html	(date 1740928226697)
+@@ -0,0 +1,10 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>Title</title>
++</head>
++<body>
++<img src="static/image/cat.jpg">
++</body>
++</html>
+\ No newline at end of file
+Index: GB_Remember/seminar/seminar_3/first_task/templates/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GB_Remember/seminar/seminar_3/first_task/templates/index.html b/GB_Remember/seminar/seminar_3/first_task/templates/index.html
+new file mode 100644
+--- /dev/null	(date 1740928226698)
++++ b/GB_Remember/seminar/seminar_3/first_task/templates/index.html	(date 1740928226698)
+@@ -0,0 +1,10 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <title>$Title$</title>
++</head>
++<body>
++$END$
++</body>
++</html>
+\ No newline at end of file
+Index: GB_Remember/seminar/seminar_3/second_task/templates/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GB_Remember/seminar/seminar_3/second_task/templates/index.html b/GB_Remember/seminar/seminar_3/second_task/templates/index.html
+new file mode 100644
+--- /dev/null	(date 1740928226699)
++++ b/GB_Remember/seminar/seminar_3/second_task/templates/index.html	(date 1740928226699)
+@@ -0,0 +1,10 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <title>$Title$</title>
++</head>
++<body>
++$END$
++</body>
++</html>
+\ No newline at end of file
+Index: GB_Flask/home_work/home_work_s3/task_8/task_8.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from werkzeug.security import generate_password_hash\r\nfrom flask import Flask, render_template, request\r\nfrom flask_wtf import CSRFProtect\r\nfrom models import db, User\r\nfrom forms import Valid_Auth\r\n\r\napp = Flask(__name__)\r\napp.config['SECRET_KEY'] = 'mysecretkey'\r\napp.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users_base_data.db'\r\ncsrf = CSRFProtect(app)\r\ndb.init_app(app)\r\n\r\n\r\n@app.cli.command('init')\r\ndef db_init():\r\n    db.create_all()\r\n    print('OK')\r\n\r\n\r\n@app.route('/', methods=[\"POST\", \"GET\"])\r\ndef regis():\r\n    form = Valid_Auth()\r\n    if request.method == 'POST' and form.validate():\r\n        name = form.name.data\r\n        surname = form.surname.data\r\n        email = form.email.data\r\n        password = generate_password_hash(form.confirm_password.data)\r\n        user = User(name_us=name, surname_us=surname, email_us=email, password_us=password)\r\n        db.session.add(user)\r\n        db.session.commit()\r\n        return render_template('succes.html', name=name, surname=surname)\r\n    return render_template('index.html', form=form)\r\n\r\n\r\n@app.route('/users')\r\ndef get_users():\r\n    users = User.query.all()\r\n    return render_template('users.html', users=users)\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GB_Flask/home_work/home_work_s3/task_8/task_8.py b/GB_Flask/home_work/home_work_s3/task_8/task_8.py
+--- a/GB_Flask/home_work/home_work_s3/task_8/task_8.py	(revision 0752c366357c618795634f9a584b23248145910a)
++++ b/GB_Flask/home_work/home_work_s3/task_8/task_8.py	(date 1740928226690)
+@@ -1,6 +1,6 @@
+ from werkzeug.security import generate_password_hash
+ from flask import Flask, render_template, request
+-from flask_wtf import CSRFProtect
++from flask_wtf import CSRFProtectrequest
+ from models import db, User
+ from forms import Valid_Auth
+ 
+Index: HotKey/HotKeyLaptopFF.ahk
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/HotKey/HotKeyLaptopFF.ahk b/HotKey/HotKeyLaptopFF.ahk
+new file mode 100644
+--- /dev/null	(date 1740928226699)
++++ b/HotKey/HotKeyLaptopFF.ahk	(date 1740928226699)
+@@ -0,0 +1,101 @@
++#Requires AutoHotkey v2.0
++
++SoundFileRu := A_ScriptDir . "\change_language_ru.mp3"
++SoundFileEn := A_ScriptDir . "\change_language_en.mp3"
++
+++F9:: {
++    Run '"C:\Program Files\Mozilla Firefox\firefox.exe" "https://github.com/Seva5959?tab=repositories"'
++}
++
+++F10:: {
++    Run '"C:\Program Files\Mozilla Firefox\firefox.exe" "https://chatgpt.com/?model=auto"'
++}
++
+++F11:: {
++    Run '"C:\Program Files\Mozilla Firefox\firefox.exe" "https://claude.ai/new"'
++}
++
+++F12:: {
++    Run '"C:\Program Files\Mozilla Firefox\firefox.exe" "https://vk.com/im?peers=473315238"'
++}
++
++; Переключить Caps Lock при нажатии Shift + Caps Lock
+++CapsLock:: {
++    SetCapsLockState(GetKeyState("CapsLock", "T") ? 0 : 1)
++}
++
++; Переключить Caps Lock при нажатии Caps Lock + Shift
++CapsLock & Shift:: {
++    SetCapsLockState(GetKeyState("CapsLock", "T") ? 0 : 1)
++}
++
++; Отключить Caps Lock при одиночном нажатии
++CapsLock::Return
++F11::Return
++F12::Return
++
++~*Shift::
++~*Alt::
++{
++    ; Проверяем, были ли нажаты обе клавиши
++    if (GetKeyState("Shift", "P") && GetKeyState("Alt", "P")) {
++        ; Воспроизведение звукового файла
++        SoundPlay(SoundFileEn)
++    }
++}
++
++#HotIf WinActive("ahk_exe firefox.exe")
++
++; Навигация по вкладкам
++!Left::  ; Alt + Стрелка влево
++{
++    Send "^{PgUp}"  ; Отправляем Ctrl + Page Up для переключения на предыдущую вкладку
++}
++!Right::  ; Alt + Стрелка вправо
++{
++    Send "^{PgDn}"  ; Отправляем Ctrl + Page Down для переключения на следующую вкладку
++}
++
++; Навигация назад (Caps Lock Left)
++CapsLock & Left:: {
++    Send "!{Left}"
++}
++
++; Навигация вперед (Caps Lock Right)
++CapsLock & Right:: {
++    Send "!{Right}"
++}
++
++; Переменная для отслеживания состояния "зажатия" клавиши Ё
++global IsTabGrabbed := false
++
++; При нажатии Ё "зажимается" текущая вкладка
++`:: {
++    global IsTabGrabbed  ; Явно указываем, что используем глобальную переменную
++    IsTabGrabbed := !IsTabGrabbed  ; Переключаем состояние
++    if (IsTabGrabbed) {
++        SoundBeep(1000)  ; Звук для индикации активации
++    } else {
++        SoundBeep(500)   ; Звук для индикации деактивации
++    }
++}
++
++; Если вкладка "зажата", стрелки перемещают её
++Left:: {
++    global IsTabGrabbed  ; Явно указываем, что используем глобальную переменную
++    if (IsTabGrabbed) {
++        Send("^+{PgUp}")  ; Ctrl + Shift + PageUp перемещает вкладку влево
++    }
++    return
++}
++
++Right:: {
++    global IsTabGrabbed  ; Явно указываем, что используем глобальную переменную
++    if (IsTabGrabbed) {
++        Send("^+{PgDn}")  ; Ctrl + Shift + PageDown перемещает вкладку вправо
++    }
++    return
++}
++
++
++#HotIf
+Index: HotKey/HotKeyLaptop.ahk
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/HotKey/HotKeyLaptop.ahk b/HotKey/HotKeyLaptopOG.ahk
+rename from HotKey/HotKeyLaptop.ahk
+rename to HotKey/HotKeyLaptopOG.ahk
+--- a/HotKey/HotKeyLaptop.ahk	(revision 0752c366357c618795634f9a584b23248145910a)
++++ b/HotKey/HotKeyLaptopOG.ahk	(date 1740928226700)
+@@ -68,4 +68,13 @@
+     Send "^{PgDn}"  ; Отправляем Ctrl + Page Down для переключения на следующую вкладку
+ }
+ 
++; Навигация назад (Caps Lock Left)
++CapsLock & Left:: {
++    Send "!{Left}"
++}
++
++; Навигация вперед (Caps Lock Right)
++CapsLock & Right:: {
++    Send "!{Right}"
++}
+ #HotIf
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"02320992-42e4-4c81-8cec-778059759b37\" name=\"Changes\" comment=\"2 seminar, task 5\">\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_1/file_name.log\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/forms.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/instance/users_base_data.db\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/modles.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/task_2.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/templates/index.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/wsgi.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_3/instance/users_base_data.db\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_3/modles.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_3/task_3.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_3/templates/index.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_3/wsgi.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/forms.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/instance/users_base_data.db\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/models.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/task_8.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/templates/index.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/templates/succes.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/wsgi.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s4/task_1/nabor_sites_task_1/threading_app_fengmyshui_com.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s4/task_1/nabor_sites_task_1/threading_chatgpt_com.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s4/task_1/nabor_sites_task_1/threading_github_com_Seva5959.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s4/task_1/nabor_sites_task_1/threading_mail_google_com.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s4/task_1/nabor_sites_task_1/threading_youtube_com.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s4/task_1/task_1.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/form.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/instance/tasks.db\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/models.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/primary.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/templates/main_page.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/templates/task.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/wsgi.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/python_advensed/test_sites/index.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/python_advensed/test_sites/style\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_3/second_task/instance/MyBooks.db\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_3/second_task/task_2.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_3/second_task/templates/index.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_3/third_task/forms.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_3/third_task/instance/users_base_data.db\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_3/third_task/modles.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_3/third_task/task_3.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_3/third_task/templates/register.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_3/third_task/wsgi.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_4/nabor_sites_task_1/threading_app_fengmyshui_com.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_4/nabor_sites_task_1/threading_chatgpt_com.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_4/nabor_sites_task_1/threading_github_com_Seva5959.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_4/nabor_sites_task_1/threading_mail_google_com.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_4/nabor_sites_task_1/threading_youtube_com.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_4/task_1.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_4/task_2.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_4/task_3.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_4/test.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s1/data.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/data.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s1/static/css/style.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/css/style.css\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s1/static/css/style_for_sites.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/css/style_for_sites.css\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/classic.jpg\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/classic.jpg\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/leatherboots.jpg\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/leatherboots.jpg\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/leatherjacket.webp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/leatherjacket.webp\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/logo.jpg\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/logo.jpg\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/palac.jpeg\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/palac.jpeg\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/raincoat.webp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/raincoat.webp\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/slimfit.webp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/slimfit.webp\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/sneakers.jpg\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/sneakers.jpg\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/sports_shoes.jpg\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/sports_shoes.jpg\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/winterjacket.webp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/winterjacket.webp\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s1/task_1.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/task_1.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s1/task_6.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/task_6.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s1/task_7.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/task_7.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s1/templates/base.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/templates/base.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s1/templates/footwear.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/templates/footwear.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s1/templates/index.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/templates/index.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s1/templates/jacket.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/templates/jacket.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s1/templates/pants.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/templates/pants.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s1/templates/primary.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/templates/primary.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s2/task_1.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s2/task_1.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s2/templates/hello_user.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s2/templates/hello_user.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s2/templates/index.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s2/templates/index.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/file_name.log\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/везде flask init нужно писать\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/instance/mydatabase.db\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_1/instance/mydatabase.db\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/moodles.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_1/moodles.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/task_1.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_1/task_1.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/templates/index.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_1/templates/index.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/wsgi.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_1/wsgi.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s3/task_1/modles.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/разбираем базы данных.txt\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s3/task_1/task_1.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/не запускается task_html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/home_work_s3/task_1/templates/index.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/templates/users.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/lecture_1/task_1.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/lecture/lecture_1/task_1.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/lecture_1/task_2.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/lecture/lecture_1/task_2.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/lecture_1/task_3.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/lecture/lecture_1/task_3.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/lecture_1/task_4.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/lecture/lecture_1/task_4.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/lecture_1/templates/show_if.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/lecture/lecture_1/templates/show_if.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/lecture_1/test.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/lecture/lecture_1/test.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/lecture_1/wsgi.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/lecture/lecture_1/wsgi.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/lecture_2/static/image/foto.jpg\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/lecture/lecture_2/static/image/foto.jpg\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/lecture_2/task_1.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/lecture/lecture_2/task_1.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/lecture_2/task_2.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/lecture/lecture_2/task_2.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/lecture_2/task_3.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/lecture/lecture_2/task_3.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/lecture_2/task_4.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/lecture/lecture_2/task_4.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/lecture_2/templates/about.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/lecture/lecture_2/templates/about.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/lecture_2/templates/form.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/lecture/lecture_2/templates/form.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/lecture_2/templates/upload.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/lecture/lecture_2/templates/upload.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/lecture_2/uploads/foto_2.jpg\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/lecture/lecture_2/uploads/foto_2.jpg\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/my_project_1/main.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/python_advensed/my_project_1/main.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/my_project_1/static/foto.webp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/python_advensed/my_project_1/static/foto.webp\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/my_project_1/static/foto_2.jpg\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/python_advensed/my_project_1/static/foto_2.jpg\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/my_project_1/static/foto_3.jpg\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/python_advensed/my_project_1/static/foto_3.jpg\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/my_project_1/templates/index.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/python_advensed/my_project_1/templates/index.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/my_project_1/templates/styles.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/python_advensed/my_project_1/templates/styles.css\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/seminar_2/static/css/style.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_2/static/css/style.css\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/seminar_2/static/image/povestka.jpg\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_2/static/image/povestka.jpg\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/seminar_2/task_1.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_2/task_1.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/seminar_2/templates/authorization.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_2/templates/authorization.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/seminar_2/templates/base.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_2/templates/base.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/seminar_2/templates/mathematics.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_2/templates/mathematics.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/seminar_2/templates/page_2.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_2/templates/page_2.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/seminar_2/templates/validator.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_2/templates/validator.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/seminar_2/templates/writeline.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_2/templates/writeline.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/seminar_2/test.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_2/test.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/seminar_2/uploads/-_5.docx\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_2/uploads/-_5.docx\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/seminar_2/uploads/2024-11-20_182544500.png\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_2/uploads/2024-11-20_182544500.png\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/seminar_3/first_task/modles.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_3/first_task/modles.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/seminar_3/first_task/task.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_3/first_task/task.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/seminar_3/first_task/task_1.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_3/first_task/task_1.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/seminar_3/first_task/templates/index.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_3/first_task/templates/index.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/seminar_3/first_task/wsgi.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_3/first_task/wsgi.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/seminar_3/instance/mydatabase.db\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/seminar_3/instance/mydatabase.db\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/seminar_3/second_task/instance/MyBooks.db\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/seminar_3/second_task/moodles.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_3/second_task/moodles.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/seminar_3/second_task/task_2.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/seminar_3/second_task/templates/index.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GB_Flask/seminar_3/second_task/wsgi.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GB_Flask/seminar/seminar_3/second_task/wsgi.py\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Python Unit Test\" />\r\n        <option value=\"Python Script\" />\r\n        <option value=\"HTML File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Merge.Settings\">\r\n    <option name=\"BRANCH\" value=\"origin/master\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;Seva5959&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/Seva5959/GeekBrains.git&quot;,\r\n    &quot;accountId&quot;: &quot;87daf00a-0f29-49af-8572-02b1baa3f119&quot;\r\n  }\r\n}</component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"file://$PROJECT_DIR$/Quitting_Smoking.py\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/seminar_12/task_2.py\" root0=\"SKIP_INSPECTION\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;customColor&quot;: &quot;&quot;,\r\n  &quot;associatedIndex&quot;: 5\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2jEpelY52K6EPVPzz5G3xnVzkcz\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_ADD_EXTERNAL_FILES\": \"true\",\r\n    \"AutoHotkey.HotKeyPC.executor\": \"Run\",\r\n    \"DefaultHtmlFileTemplate\": \"HTML File\",\r\n    \"Python tests.Doctest via pytest in task_3_my.py.executor\": \"Run\",\r\n    \"Python tests.Doctest via pytest in who_likes_it.py.executor\": \"Run\",\r\n    \"Python tests.pytest in task_1.py.executor\": \"Run\",\r\n    \"Python tests.pytest in task_12.py.executor\": \"Run\",\r\n    \"Python tests.pytest in test.py.executor\": \"Run\",\r\n    \"Python.Quitting_Smoking.executor\": \"Run\",\r\n    \"Python.aboba.executor\": \"Run\",\r\n    \"Python.first bd.executor\": \"Run\",\r\n    \"Python.main.executor\": \"Run\",\r\n    \"Python.task_1.executor\": \"Run\",\r\n    \"Python.task_2.executor\": \"Run\",\r\n    \"Python.task_3.executor\": \"Run\",\r\n    \"Python.task_4.executor\": \"Run\",\r\n    \"Python.test.executor\": \"Run\",\r\n    \"Python.who_likes_it.executor\": \"Run\",\r\n    \"Python.wsgi.executor\": \"Run\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"git-widget-placeholder\": \"Merging master\",\r\n    \"last_opened_file_path\": \"C:/Users/loha8/OneDrive/Рабочий стол/GeekBrains/GB_Flask/home_work/home_work_s3/task_8/wsgi.py\",\r\n    \"settings.editor.selected.configurable\": \"preferences.pluginManager\",\r\n    \"two.files.diff.last.used.file\": \"C:/Users/loha8/OneDrive/Рабочий стол/GeekBrains/seminar_10/task_3\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\loha8\\OneDrive\\Рабочий стол\\GeekBrains\\GB_Flask\\seminar_2\\static\\image\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"AhkRunConfiguration\">\r\n      <option name=\"runner\" value=\"\" />\r\n      <option name=\"pathToScript\" value=\"\" />\r\n      <option name=\"arguments\" value=\"\" />\r\n      <switches>\r\n        <switch name=\"/ErrorStdOut\" enabled=\"true\" />\r\n      </switches>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"BD\" type=\"PythonConfigurationType\" factoryName=\"Python\">\r\n      <module name=\"GeekBrains\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/GB_Flask/my_project/YouDo/wsgi.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-python-sdk-98f27166c754-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.21829.153\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"02320992-42e4-4c81-8cec-778059759b37\" name=\"Changes\" comment=\"\" />\r\n      <created>1720962189841</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1720962189841</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"24.09.24, 12 семинар 2 задание\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1727196988051</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1727196988052</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Изменил структуру директории\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1730539146644</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1730539146644</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"15 семинар 2.0 Последний коммит\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1730550948744</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1730550948744</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Flask start, 1 seminar, Version: 1.0\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1730575646720</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1730575646720</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"1 seminar, task 4\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1730623572737</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1730623572737</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Flask, seminar 2, task 4\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1730745905967</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1730745905967</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"2 seminar, task 5\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1732121931480</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1732121931480</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"8\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"UnknownFeatures\">\r\n    <option featureType=\"com.intellij.fileTypeFactory\" implementationName=\"*.csv\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"24.09.24, 12 семинар 2 задание\" />\r\n    <MESSAGE value=\"Изменил структуру директории\" />\r\n    <MESSAGE value=\"15 семинар 2.0 Последний коммит\" />\r\n    <MESSAGE value=\"Flask start, 1 seminar, Version: 1.0\" />\r\n    <MESSAGE value=\"1 seminar, task 4\" />\r\n    <MESSAGE value=\"Flask, seminar 2, task 4\" />\r\n    <MESSAGE value=\"final create sites: wear shop\" />\r\n    <MESSAGE value=\"2 seminar, task 0\" />\r\n    <MESSAGE value=\"2 seminar, task 5\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"2 seminar, task 5\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/GB_Flask/seminar/seminar_4/task_2.py</url>\r\n          <line>22</line>\r\n          <option name=\"timeStamp\" value=\"2\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n      <default-breakpoints>\r\n        <breakpoint type=\"python-exception\">\r\n          <properties notifyOnTerminate=\"true\" exception=\"BaseException\">\r\n            <option name=\"notifyOnTerminate\" value=\"true\" />\r\n          </properties>\r\n        </breakpoint>\r\n      </default-breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 0752c366357c618795634f9a584b23248145910a)
++++ b/.idea/workspace.xml	(date 1740928240316)
+@@ -5,139 +5,23 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="02320992-42e4-4c81-8cec-778059759b37" name="Changes" comment="2 seminar, task 5">
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_1/file_name.log" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/forms.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/instance/users_base_data.db" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/modles.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/task_2.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/templates/index.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_2/wsgi.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_3/instance/users_base_data.db" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_3/modles.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_3/task_3.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_3/templates/index.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_3/wsgi.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/forms.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/instance/users_base_data.db" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/models.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/task_8.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/templates/index.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/templates/succes.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/wsgi.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s4/task_1/nabor_sites_task_1/threading_app_fengmyshui_com.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s4/task_1/nabor_sites_task_1/threading_chatgpt_com.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s4/task_1/nabor_sites_task_1/threading_github_com_Seva5959.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s4/task_1/nabor_sites_task_1/threading_mail_google_com.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s4/task_1/nabor_sites_task_1/threading_youtube_com.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s4/task_1/task_1.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/form.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/instance/tasks.db" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/models.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/primary.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/templates/main_page.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/templates/task.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/wsgi.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/python_advensed/test_sites/index.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/python_advensed/test_sites/style" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/second_task/instance/MyBooks.db" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/second_task/task_2.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/second_task/templates/index.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/third_task/forms.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/third_task/instance/users_base_data.db" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/third_task/modles.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/third_task/task_3.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/third_task/templates/register.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/third_task/wsgi.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/nabor_sites_task_1/threading_app_fengmyshui_com.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/nabor_sites_task_1/threading_chatgpt_com.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/nabor_sites_task_1/threading_github_com_Seva5959.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/nabor_sites_task_1/threading_mail_google_com.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/nabor_sites_task_1/threading_youtube_com.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/task_1.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/task_2.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/task_3.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_4/test.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/static/image/cat.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/task_3.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/task_33.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/task_4.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/task_5.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/task_6.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/templates/auth.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/templates/counting.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/templates/form.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/templates/index.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/templates/interface.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/templates/main.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/templates/mistake.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/templates/rezult.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/templates/seckret.html" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/data.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/css/style.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/css/style_for_sites.css" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/css/style_for_sites.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/classic.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/classic.jpg" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/leatherboots.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/leatherboots.jpg" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/leatherjacket.webp" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/leatherjacket.webp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/logo.jpg" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/palac.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/palac.jpeg" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/raincoat.webp" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/raincoat.webp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/slimfit.webp" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/slimfit.webp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/sneakers.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/sneakers.jpg" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/sports_shoes.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/sports_shoes.jpg" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/static/image/winterjacket.webp" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/static/image/winterjacket.webp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/task_1.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/task_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/task_6.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/task_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/task_7.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/templates/base.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/footwear.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/templates/footwear.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/templates/index.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/jacket.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/templates/jacket.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/pants.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/templates/pants.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s1/templates/primary.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s1/templates/primary.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s2/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s2/task_1.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s2/templates/hello_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s2/templates/hello_user.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s2/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s2/templates/index.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/file_name.log" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/везде flask init нужно писать" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/instance/mydatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_1/instance/mydatabase.db" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/moodles.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_1/moodles.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_1/task_1.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_1/templates/index.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s3/seminar_3_task_1/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_1/wsgi.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s3/task_1/modles.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/разбираем базы данных.txt" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s3/task_1/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/my_project/YouDo_Uncorrect/не запускается task_html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/home_work_s3/task_1/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/home_work/home_work_s3/task_8/templates/users.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_1/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_1/task_1.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_1/task_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_1/task_2.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_1/task_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_1/task_3.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_1/task_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_1/task_4.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_1/templates/show_if.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_1/templates/show_if.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_1/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_1/test.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_1/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_1/wsgi.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_2/static/image/foto.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_2/static/image/foto.jpg" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_2/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_2/task_1.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_2/task_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_2/task_2.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_2/task_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_2/task_3.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_2/task_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_2/task_4.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_2/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_2/templates/about.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_2/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_2/templates/form.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_2/templates/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_2/templates/upload.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/lecture_2/uploads/foto_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/lecture/lecture_2/uploads/foto_2.jpg" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/my_project_1/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/python_advensed/my_project_1/main.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/my_project_1/static/foto.webp" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/python_advensed/my_project_1/static/foto.webp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/my_project_1/static/foto_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/python_advensed/my_project_1/static/foto_2.jpg" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/my_project_1/static/foto_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/python_advensed/my_project_1/static/foto_3.jpg" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/my_project_1/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/python_advensed/my_project_1/templates/index.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/my_project_1/templates/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/python_advensed/my_project_1/templates/styles.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/static/css/style.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/static/image/povestka.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/static/image/povestka.jpg" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/task_1.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/authorization.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/templates/authorization.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/templates/base.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/mathematics.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/templates/mathematics.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/page_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/templates/page_2.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/validator.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/templates/validator.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/templates/writeline.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/templates/writeline.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/test.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/uploads/-_5.docx" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/uploads/-_5.docx" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_2/uploads/2024-11-20_182544500.png" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_2/uploads/2024-11-20_182544500.png" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/first_task/modles.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/first_task/modles.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/first_task/task.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/first_task/task.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/first_task/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/first_task/task_1.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/first_task/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/first_task/templates/index.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/first_task/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/first_task/wsgi.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/instance/mydatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar_3/instance/mydatabase.db" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/second_task/instance/MyBooks.db" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/second_task/moodles.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/second_task/moodles.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/second_task/task_2.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/second_task/templates/index.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar_3/second_task/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/second_task/wsgi.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/task_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/task_2.py" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -190,36 +74,36 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "ASKED_ADD_EXTERNAL_FILES": "true",
+-    "AutoHotkey.HotKeyPC.executor": "Run",
+-    "DefaultHtmlFileTemplate": "HTML File",
+-    "Python tests.Doctest via pytest in task_3_my.py.executor": "Run",
+-    "Python tests.Doctest via pytest in who_likes_it.py.executor": "Run",
+-    "Python tests.pytest in task_1.py.executor": "Run",
+-    "Python tests.pytest in task_12.py.executor": "Run",
+-    "Python tests.pytest in test.py.executor": "Run",
+-    "Python.Quitting_Smoking.executor": "Run",
+-    "Python.aboba.executor": "Run",
+-    "Python.first bd.executor": "Run",
+-    "Python.main.executor": "Run",
+-    "Python.task_1.executor": "Run",
+-    "Python.task_2.executor": "Run",
+-    "Python.task_3.executor": "Run",
+-    "Python.task_4.executor": "Run",
+-    "Python.test.executor": "Run",
+-    "Python.who_likes_it.executor": "Run",
+-    "Python.wsgi.executor": "Run",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "git-widget-placeholder": "Merging master",
+-    "last_opened_file_path": "C:/Users/loha8/OneDrive/Рабочий стол/GeekBrains/GB_Flask/home_work/home_work_s3/task_8/wsgi.py",
+-    "settings.editor.selected.configurable": "preferences.pluginManager",
+-    "two.files.diff.last.used.file": "C:/Users/loha8/OneDrive/Рабочий стол/GeekBrains/seminar_10/task_3"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
++    &quot;AutoHotkey.HotKeyPC.executor&quot;: &quot;Run&quot;,
++    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
++    &quot;Python tests.Doctest via pytest in task_3_my.py.executor&quot;: &quot;Run&quot;,
++    &quot;Python tests.Doctest via pytest in who_likes_it.py.executor&quot;: &quot;Run&quot;,
++    &quot;Python tests.pytest in task_1.py.executor&quot;: &quot;Run&quot;,
++    &quot;Python tests.pytest in task_12.py.executor&quot;: &quot;Run&quot;,
++    &quot;Python tests.pytest in test.py.executor&quot;: &quot;Run&quot;,
++    &quot;Python.Quitting_Smoking.executor&quot;: &quot;Run&quot;,
++    &quot;Python.aboba.executor&quot;: &quot;Run&quot;,
++    &quot;Python.first bd.executor&quot;: &quot;Run&quot;,
++    &quot;Python.main.executor&quot;: &quot;Run&quot;,
++    &quot;Python.task_1.executor&quot;: &quot;Run&quot;,
++    &quot;Python.task_2.executor&quot;: &quot;Run&quot;,
++    &quot;Python.task_3.executor&quot;: &quot;Run&quot;,
++    &quot;Python.task_4.executor&quot;: &quot;Run&quot;,
++    &quot;Python.test.executor&quot;: &quot;Run&quot;,
++    &quot;Python.who_likes_it.executor&quot;: &quot;Run&quot;,
++    &quot;Python.wsgi.executor&quot;: &quot;Run&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/loha8/OneDrive/Рабочий стол/code_warse&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
++    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/loha8/OneDrive/Рабочий стол/GeekBrains/seminar_10/task_3&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="C:\Users\loha8\OneDrive\Рабочий стол\GeekBrains\GB_Flask\seminar_2\static\image" />
+@@ -235,7 +119,7 @@
+       </switches>
+       <method v="2" />
+     </configuration>
+-    <configuration name="BD" type="PythonConfigurationType" factoryName="Python">
++    <configuration name="task_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="GeekBrains" />
+       <option name="ENV_FILES" value="" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+@@ -244,11 +128,11 @@
+         <env name="PYTHONUNBUFFERED" value="1" />
+       </envs>
+       <option name="SDK_HOME" value="" />
+-      <option name="WORKING_DIRECTORY" value="" />
+-      <option name="IS_MODULE_SDK" value="false" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GB_Flask/lecture/lecture_2" />
++      <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GB_Flask/my_project/YouDo/wsgi.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GB_Flask/lecture/lecture_2/task_1.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -257,6 +141,11 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Python.task_1" />
++      </list>
++    </recent_temporary>
+   </component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+Index: test.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/test.py b/test.py
+new file mode 100644
+--- /dev/null	(date 1740928226700)
++++ b/test.py	(date 1740928226700)
+@@ -0,0 +1,34 @@
++import asyncio
++import time
++from aiohttp import ClientSession
++
++
++async def get_weather(city):
++    async with ClientSession() as session:
++        url = f'http://api.openweathermap.org/data/2.5/weather'
++        params = {'q': city, 'APPID': '2a4ff86f9aaa70041ec8e82db64abf56'}
++
++        async with session.get(url=url, params=params) as response:
++            weather_json = await response.json()
++            print(f'{city}: {weather_json["weather"][0]["main"]}')
++
++
++async def main(cities_):
++    tasks = []
++    for city in cities_:
++        tasks.append(asyncio.create_task(get_weather(city)))
++
++    results = await asyncio.gather(*tasks)
++
++    for result in results:
++        print(result)
++
++
++cities = ['Moscow', 'St. Petersburg', 'Rostov-on-Don', 'Kaliningrad', 'Vladivostok',
++          'Minsk', 'Beijing', 'Delhi', 'Istanbul', 'Tokyo', 'London', 'New York']
++
++print(time.strftime('%X'))
++
++asyncio.run(main(cities))
++
++print(time.strftime('%X'))
+diff --git a/GB_Remember/seminar/seminar_3/first_task/models.py b/GB_Remember/seminar/seminar_3/first_task/models.py
+new file mode 100644
+diff --git a/GB_Remember/seminar/seminar_3/first_task/task_1.py b/GB_Remember/seminar/seminar_3/first_task/task_1.py
+new file mode 100644
+diff --git a/GB_Remember/seminar/seminar_3/first_task/wsgi.py b/GB_Remember/seminar/seminar_3/first_task/wsgi.py
+new file mode 100644
+diff --git a/GB_Remember/seminar/seminar_3/second_task/models.py b/GB_Remember/seminar/seminar_3/second_task/models.py
+new file mode 100644
+diff --git a/GB_Remember/seminar/seminar_3/second_task/task_2.py b/GB_Remember/seminar/seminar_3/second_task/task_2.py
+new file mode 100644
+diff --git a/GB_Remember/seminar/seminar_3/second_task/wsgi.py b/GB_Remember/seminar/seminar_3/second_task/wsgi.py
+new file mode 100644
