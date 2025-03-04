@@ -5,23 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02320992-42e4-4c81-8cec-778059759b37" name="Changes" comment="2 seminar, task 5">
-      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/static/image/cat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/task_3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/task_33.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/task_4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/task_5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/task_6.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/templates/auth.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/templates/counting.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/templates/form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/templates/interface.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/templates/main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/templates/mistake.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/templates/rezult.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/templates/seckret.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Remember/seminar/seminar_3/first_task/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Remember/seminar/seminar_3/first_task/task_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Remember/seminar/seminar_3/first_task/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Remember/seminar/seminar_3/first_task/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Remember/seminar/seminar_3/second_task/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Remember/seminar/seminar_3/second_task/task_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Remember/seminar/seminar_3/second_task/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GB_Remember/seminar/seminar_3/second_task/wsgi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/task_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Remember/lecture/lecture_2/task_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/second_task/instance/MyBooks.db" beforeDir="false" afterPath="$PROJECT_DIR$/GB_Flask/seminar/seminar_3/second_task/instance/MyBooks.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +25,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Unit Test" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
