@@ -41,7 +41,7 @@ simple_logger = logging.getLogger("Логгер для функции create_bd"
 simple_logger.setLevel(logging.INFO)
 file_handler = logging.FileHandler('file_logger.log', mode='w', encoding='utf-8')
 format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                           datefmt='%Y-%m-%d %H:%M')
+                           datefmt='%d.%m.%Y %H:%M')
 file_handler.setFormatter(format)
 simple_logger.addHandler(file_handler)
 
@@ -53,7 +53,7 @@ class SchoolBoy(db.Model):
     surname = db.Column(db.String(61), nullable=False)
     sex = db.Column(db.String(61), nullable=False)
     group = db.Column(db.String(61), nullable=False)
-    id_faculty = db.Column(db.Integer, db.ForeignKey('school_direction.id_s'))
+    id_faculty = db.Column(db.Integer, db.ForeignKey('school_direction.id_sd'))
 
     def __repr__(self):
         return f'{self.name} {self.surname}'
