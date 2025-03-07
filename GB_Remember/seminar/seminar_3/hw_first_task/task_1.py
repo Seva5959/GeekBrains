@@ -23,7 +23,7 @@ def create_db():
                 for people in students_data[sc_dir]:
                     educational = SchoolBoy(
                         name=people['username'],
-                        surename=people['surename'],
+                        surname=people['surename'],
                         sex=people['sex'],
                         group=sc_dir,
                         id_faculty=sc_direction[sc_dir])
