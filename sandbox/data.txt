@@ -1,0 +1,12 @@
+rez_first_var=43.576
+rez_second_var= 0.36
+rez_first_var=
+rez_second_var=0.9879999999999999
+rez_first_var=
+rez_second_var=0.42600000000000005
+rez_first_var=
+rez_second_var=0.40800000000000003
+rez_first_var=
+rez_second_var=1.392
+rez_first_var=
+rez_second_var=0.3
