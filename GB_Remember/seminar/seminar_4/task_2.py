@@ -18,11 +18,11 @@ links = [
 
 start_time = time.time()
 
-os.makedirs('nabor_sites_for_task_2', exist_ok=True)
+os.makedirs('nabor_sites_multipocess', exist_ok=True)
 def download(url: str):
     aboba = requests.get(url)
     file_name = 'multipocess' + url.replace('https://','').replace('.','_').replace('/','_') + '.html'
-    file_path = os.path.join('nabor_sites_for_task_2', file_name)
+    file_path = os.path.join('nabor_sites_multipocess', file_name)
     with open(file_path, mode='a', encoding='utf-8') as f:
         f.write(aboba.text)
 
