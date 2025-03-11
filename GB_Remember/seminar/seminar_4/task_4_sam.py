@@ -7,8 +7,6 @@ def count_words(file_path):
         count = len(text.split(' '))
         print(f'{file_path} имеет {count} слов')
 
-
-
 def main(dir):
     threads = []
 
