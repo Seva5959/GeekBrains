@@ -1,3 +1,4 @@
+# task_3
 import asyncio
 import aiohttp
 import os
@@ -35,7 +36,7 @@ async def download(session, url):
             # Сохраняем страницу в файл
         with open(file_path, mode='w', encoding='utf-8') as f:
             f.write(html)
-            print(f'Downloaded {url} in {time.time() - start_time:.2f} seconds')
+            # print(f'Downloaded {url} in {time.time() - start_time:.2f} seconds')
 
 async def main():
     """Основная асинхронная функция."""
@@ -44,6 +45,11 @@ async def main():
         await asyncio.gather(*tasks)  # Запускаем все загрузки одновременно
 
 
-# Запускаем асинхронный код
-asyncio.run(main())
-print(f"Finished in {time.time() - start_time:.2f} seconds")
+def psevdo_main():
+    print('psevdo_main')
+    # Запускаем асинхронный код
+    asyncio.run(main())
+    # print(f"Finished in {time.time() - start_time:.2f} seconds")
+    end_time = time.time() - start_time
+    return round(end_time,3)
+
