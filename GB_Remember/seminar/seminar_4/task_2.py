@@ -28,13 +28,25 @@ def download(url: str):
 
 
 
-if __name__ == "__main__":
-    # Контекстный менеджер автоматически закроет все процессы, когда они завершат работу,
-    # не нужно делать pool.close() и pool.join() вручную.
-    with Pool(processes=os.cpu_count()) as pool: # кол-во процессов будет равно кол-ву ядер пк
-        pool.map(download, links)
+# if __name__ == "__main__":
+#     # Контекстный менеджер автоматически закроет все процессы, когда они завершат работу,
+#     # не нужно делать pool.close() и pool.join() вручную.
+#     with Pool(processes=os.cpu_count()) as pool: # кол-во процессов будет равно кол-ву ядер пк
+#         pool.map(download, links)
 
-    print(f"Finished in {time.time() - start_time:.2f} seconds")
+def psevdo_main():
+    """Измеряем время работы multiprocessing"""
+    start_time = time.time()  # Засекаем время перед запуском пулла
+    with Pool(processes=os.cpu_count()) as pool:
+        pool.map(download, links)
+    end_time = time.time() - start_time  # Фиксируем разницу времени
+    return round(end_time, 3)
+
+
+if __name__ == "__main__":
+    print(psevdo_main())  # Запускаем, если файл выполняется напрямую
+
+
 
 
 

@@ -23,16 +23,20 @@ def download(url: str):
     file_path = os.path.join('nabor_sites_thread', file_name)
     with open(file_path, mode='w', encoding='utf-8') as f:
         f.write(aboba.text)
-    print(f'Downloaded {url} in {time.time()-start_time:.2f} seconds')
+    # print(f'Downloaded {url} in {time.time()-start_time:.2f} seconds')
 
-threads = []
-for url in links:
-    th = Thread(target=download, args=[url])
-    threads.append(th)
-    th.start()
+def psevdo_main():
+    start_time = time.time()
+    threads = []
+    for url in links:
+        th = Thread(target=download, args=[url])
+        threads.append(th)
+        th.start()
 
-for thr in threads:
-    thr.join()
+    for thr in threads:
+        thr.join()
+
+    return round(time.time() - start_time, 3)
 
 
 
