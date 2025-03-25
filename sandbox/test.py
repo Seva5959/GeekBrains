@@ -1,60 +1,38 @@
-import time
+import os
+import requests
 
-# start_time = time.time()
-#
-# for i in range(1_000_000):
-#     print(i)
-# per_1 = float(f'{time.time() - start_time:.2f}')
-#
-# for i in range(1_000_000):
-#     print(i)
-# per_2 = float(f'{time.time() - start_time:.2f}')
-#
-# for i in range(1_000_000):
-#     print(i)
-# per_3 = float(f'{time.time() - start_time:.2f}')
-#
-# for i in range(1_000_000):
-#     print(i)
-# per_4 = float(f'{time.time() - start_time:.2f}')
-#
-# for i in range(1_000_000):
-#     print(i)
-# per_5 = float(f'{time.time() - start_time:.2f}')
-#
-# rez_first_var = (per_5 + per_4 + per_3 + per_2 + per_1) / 5
+dir_name = 'image_storage'
+file_path = os.path.join(dir_name, 'Wikipedia-logo.png')
 
-start_time = time.time()
+base_url = "https://www.wikipedia.org/"
+image_path = "portal/wikipedia.org/assets/img/Wikipedia-logo-v2.png"  # Найденный путь
+image_url = base_url + image_path  # Полный URL изображения
 
-for i in range(1_000_000):
-    if i == 999_999:
-        break
-per_1 = float(f'{time.time() - start_time:.2f}')
+response = requests.get(image_url)  # Отправляем GET-запрос
+if response.status_code == 200: # Проверяем, что запрос успешный
+    with open(file_path, "wb") as file:
+        file.write(response.content)  # Именно метод content позволяет записывать png, mp3, ZIP, PDF
 
-for i in range(1_000_000):
-    if i == 999_999:
-        break
-per_2 = float(f'{time.time() - start_time:.2f}')
+# ----------------------------------------------------------------
 
-for i in range(1_000_000):
-    if i == 999_999:
-        break
-per_3 = float(f'{time.time() - start_time:.2f}')
+import os
+import requests
 
-for i in range(1_000_000):
-    if i == 999_999:
-        break
-per_4 = float(f'{time.time() - start_time:.2f}')
+dir_name = 'image_storage'
+file_path = os.path.join(dir_name, 'Wikipedia-logo.png')
 
-for i in range(1_000_000):
-    if i == 999_999:
-        break
-per_5 = float(f'{time.time() - start_time:.2f}')
+base_url = "https:"
+src_path = "//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/17px-Wikispecies-logo.svg.png"  # Найденный путь
+image_url = base_url + src_path  # Полный URL изображения
 
-rez_second_var = (per_5 + per_4 + per_3 + per_2 + per_1) / 5
+response = requests.get(image_url)  # Отправляем GET-запрос
+if response.status_code == 200: # Проверяем, что запрос успешный
+    with open(file_path, "wb") as file:
+        file.write(response.content)  # Именно метод content позволяет записывать png, mp3, ZIP, PDF
+        print('Успешно скачано')
+else:
+    print('Oшибка скачивания')
 
-with open('data.txt', mode='a', encoding='utf-8') as f:
-    f.write(f'\nrez_first_var=\n{rez_second_var=}')
 
 
 
