@@ -1,7 +1,7 @@
 #Requires AutoHotkey v2.0
 
-SoundFileRu := A_ScriptDir . "\change_language_ru.mp3"
-SoundFileEn := A_ScriptDir . "\change_language_en.mp3"
+SoundFileRu := A_ScriptDir . "\sound\change_language_ru.mp3"
+SoundFileEn := A_ScriptDir . "\sound\change_language_en.mp3"
 
 +F9:: {
     Run '"C:\Program Files\Mozilla Firefox\firefox.exe" "https://github.com/Seva5959?tab=repositories"'
@@ -85,6 +85,8 @@ Left:: {
     global IsTabGrabbed  ; Явно указываем, что используем глобальную переменную
     if (IsTabGrabbed) {
         Send("^+{PgUp}")  ; Ctrl + Shift + PageUp перемещает вкладку влево
+    }  else {
+        Send "{Left}"  ; Обычное нажатие стрелки влево
     }
     return
 }
@@ -93,6 +95,8 @@ Right:: {
     global IsTabGrabbed  ; Явно указываем, что используем глобальную переменную
     if (IsTabGrabbed) {
         Send("^+{PgDn}")  ; Ctrl + Shift + PageDown перемещает вкладку вправо
+    }  else {
+        Send "{Right}"  ; Обычное нажатие стрелки вправо
     }
     return
 }
