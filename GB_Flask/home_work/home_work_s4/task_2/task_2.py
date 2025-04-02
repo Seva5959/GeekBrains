@@ -1,25 +1,52 @@
 import os
-import requests
 import re
+import requests
 
-# Если путь начинается с http:// или https:// → он уже готов для скачивания.
-# Если путь начинается с // → добавить https:.
-# Если путь начинается с / → добавить домен сайта.
+VALID_EXTENSIONS = {"jpg", "jpeg", "png", "gif", "svg", "webp", "bmp", "tiff"}
+DIR_FOR_IMAGES = 'image_storage'
+site = 'example.html'
+domen = 'https://wikipedia.org'
 
-src_path = "//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/17px-Wikispecies-logo.svg.png"  # Найденный путь
+def find_src_in_html(file_name):
+    with open(file_name, mode='r', encoding='utf-8') as f:
+        html_txt = f.read()
+    src_list = re.findall(r'<img[^>]+src="([^"]+)"', html_txt)
 
-txt = 'fdhgdskjghkdjg<po1 Oчень полезная информация >dsk<po1 fhdsgfjgjgsfh >fls<<po1 Мотя лох сосет горох><>>.<><><po<<>'
+    return src_list
 
-# 1)алгоритм по нахождению src через регулярки
-# 2)загрузка всех изображений через найденные src
-# 2.1)отработка 3 разных вариантов
-# 3)использование мультипроцессорного способа
+def last_prf(list_src_tag):
+    data = []
+    for elem in list_src_tag:
+        prf = elem.rsplit('.', 1)[-1].lower() if '.' in elem else ''
+        if prf in VALID_EXTENSIONS:
+            data.append([elem, prf])
 
-lst_pol = re.findall(r'<po1(.*?)>', txt)
-print(lst_pol[2])
+    return data
+
+def downloader(path_dire, src_list):
+    count = 1
+    for elem in src_list:
+        src = elem[0]
+        prf = elem[1]
+        if src[0:2] == '//': # Отрабатываю если путь начинается с //
+            url = 'https:' + src
+        elif src[0:2] == 'ht': # Отрабатываю если путь начинается с https или http
+            url = src
+        else: # Отрабатываю если путь начинается с \
+            url = domen + src
+
+        responce = requests.get(url)
+        if responce.status_code == 200:
+            file_name = f'foto_{count}.{prf}'
+            file_path = os.path.join(path_dire, file_name)
+            with open(file_path, mode='wb') as f:
+                f.write(responce.content)
+            count += 1
+
+def main(site_direction):
+    src_lst_raw = find_src_in_html(site)
+    src_list_ready = last_prf(src_lst_raw)
+    downloader(DIR_FOR_IMAGES, src_list_ready)
 
 
-
-
-
-
+main()
