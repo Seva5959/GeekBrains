@@ -8,9 +8,13 @@ site_name = 'https://www.nasa.gov/'
 dir_for_images = 'storage'
 
 def get_all_images(url: str) -> list[str]:
+    # Позволяет, получить объект из которого удобно достать любой html тег
     soup = bs4.BeautifulSoup(requests.get(url).content, 'html.parser')
     urls = []
-    for img in tqdm.tqdm(soup.find_all('img'), 'Извлечение изображений'):
+    # Обычный for i in range, но тут есть прогресс бар.
+    # Важно учитывать, что в асинхронном коде это может работать некорректно.
+    # Лучше использовать tqdm.asyncio
+    for img in tqdm.tqdm(iterable=soup.find_all('img'), desc='Извлечение изображений'):
         img_url = img.attrs.get('src')
         if not img_url:
             continue
@@ -20,8 +24,8 @@ def get_all_images(url: str) -> list[str]:
             img_url = img_url[:pos]
         except ValueError:
             pass
-    if is_valid(img_url):
-        urls.append(img_url)
+        if is_valid(img_url):
+            urls.append(img_url)
     return urls
 
 
