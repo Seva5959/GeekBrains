@@ -4,7 +4,8 @@ import tqdm
 import bs4
 import urllib.parse
 
-site_name = 'https://www.nasa.gov/'
+
+site_name = 'https://ru.wikipedia.org/wiki/%D0%AD%D0%BD%D1%82%D1%80%D0%BE%D0%BF%D0%B8%D1%8F_%D0%B2_%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9_%D1%82%D0%B5%D1%80%D0%BC%D0%BE%D0%B4%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8%D0%BA%D0%B5'
 dir_for_images = 'storage'
 
 def get_all_images(url: str) -> list[str]:
@@ -53,24 +54,29 @@ def is_valid(url: str) -> bool:
     return bool(parsed.netloc) and bool(parsed.scheme)
 
 
-def download(url: str, name_dir: str, count: int) -> None:
+def download(url_img: str, name_dir: str, count: int) -> None:
     '''
     Функция скачивает изображение в указанную директорию
 
     The function downloads the image to the specified directory
     '''
     os.makedirs(name_dir, exist_ok=True)
-    response = requests.get(url, stream=True)
+    response = requests.get(url_img, stream=True)
     # splitext предназначен для того, чтобы разбивать url на окончание и все остальное
-    ext = os.path.splitext(url)[1]
-    filename = os.path.join(name_dir, f'foto_{count}{ext}')
-    file_size = int(response.headers.get('Content-Length', 0))
-    progress = tqdm.tqdm(response.iter_content(1024), f'Загрузка {filename}',
-        total=file_size, unit='B', unit_scale=True, unit_divisor=1024)
-    with open(filename, mode='wb')as f:
-        for data in progress.iterable:
-            f.write(data)
-            progress.update(len(data))
+    ext = os.path.splitext(url_img)[1]
+    if ext:
+        сделать проверку через первые числа байтов вместо Content-Type, используя библиотеку mimetypes
+        if 'image' not in response.headers.get('Content-Type',''):
+            print(f'Url {url_img} не является изображением. Тип: {response.headers.get("Content-Type","")}')
+            return
+        filename = os.path.join(name_dir, f'foto_{count}{ext}')
+        file_size = int(response.headers.get('Content-Length', 0))
+        progress = tqdm.tqdm(response.iter_content(1024), f'Загрузка {filename}',
+            total=file_size, unit='B', unit_scale=True, unit_divisor=1024)
+        with open(filename, mode='wb')as f:
+            for data in progress.iterable:
+                f.write(data)
+                progress.update(len(data))
 
 
 def main(url: str, path: str) -> None:
