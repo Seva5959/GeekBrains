@@ -1,3 +1,7 @@
+почитать внимательно гигачат, интересную инфу пишет
+
+
+
 import os
 import requests
 import tqdm
@@ -7,11 +11,13 @@ import magic
 
 site_name = 'https://ru.wikipedia.org/wiki/%D0%AD%D0%BD%D1%82%D1%80%D0%BE%D0%BF%D0%B8%D1%8F_%D0%B2_%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9_%D1%82%D0%B5%D1%80%D0%BC%D0%BE%D0%B4%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8%D0%BA%D0%B5'
 dir_for_images = 'storage'
-dict_ext = {'image/jpeg':'.jpeg',
-            'image/png':'.png',
-            'image/gif':'.gif',
-            'image/webp':'.webp',
-            'image/svg+xml':'.svg+',}
+dict_ext = {'image/jpeg': '.jpeg',
+            'image/png': '.png',
+            'image/gif': '.gif',
+            'image/webp': '.webp',
+            'image/svg': '.svg', }
+
+
 def get_all_images(url: str) -> list[str]:
     '''
     Функция проходит по сайту и берет оттуда src. После чего преобразует в ссылку для скачивания
@@ -79,8 +85,8 @@ def download(url_img: str, name_dir: str, count: int) -> None:
     filename = os.path.join(name_dir, f'foto_{count}{ext}')
     file_size = int(response.headers.get('Content-Length', 0))
     progress = tqdm.tqdm(response.iter_content(1024), f'Загрузка {filename}',
-        total=file_size, unit='B', unit_scale=True, unit_divisor=1024)
-    with open(filename, mode='wb')as f:
+                         total=file_size, unit='B', unit_scale=True, unit_divisor=1024)
+    with open(filename, mode='wb') as f:
         for data in progress.iterable:
             f.write(data)
             progress.update(len(data))
@@ -94,22 +100,8 @@ def main(url: str, path: str) -> None:
         download(img, path, count)
 
 
-main(site_name, dir_for_images)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if __name__ == '__main__':
+    for filename in os.listdir(dir_for_images):
+        file_path = os.path.join(dir_for_images, filename)
+        os.unlink(file_path)
+    main(site_name, dir_for_images)
