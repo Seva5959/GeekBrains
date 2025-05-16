@@ -1,7 +1,3 @@
-почитать внимательно гигачат, интересную инфу пишет
-
-
-
 import os
 import requests
 import tqdm
@@ -65,31 +61,54 @@ def is_valid(url: str) -> bool:
 
 
 def download(url_img: str, name_dir: str, count: int) -> None:
-    '''
-    Функция скачивает изображение в указанную директорию
-
-    The function downloads the image to the specified directory
-    '''
     os.makedirs(name_dir, exist_ok=True)
-    # Отправляем GEТ-запрос, stream=True указывает, что хоти скачать не весь файл
-    with requests.get(url_img, stream=True) as response:
-        # Читаем первые 2 КБ
-        chunk = next(response.iter_content(2048))
-    # Идет проверка типа
-    mime = magic.from_buffer(chunk, mime=True)
-    if str(mime) in dict_ext:
-        ext = dict_ext[mime]
-    else:
-        print(f"Неизвестный тип изображения: {mime}")
-        return
-    filename = os.path.join(name_dir, f'foto_{count}{ext}')
-    file_size = int(response.headers.get('Content-Length', 0))
-    progress = tqdm.tqdm(response.iter_content(1024), f'Загрузка {filename}',
-                         total=file_size, unit='B', unit_scale=True, unit_divisor=1024)
-    with open(filename, mode='wb') as f:
-        for data in progress.iterable:
-            f.write(data)
-            progress.update(len(data))
+    try:
+        with requests.get(url_img, stream=True) as response:
+            # Проверяем статус ответа
+            if response.status_code != 200:
+                raise Exception("Файл не найден")
+
+            # Определяем длину файла. Это просто чтения заголовка, никак не тормозит код
+            # Но не всегда длина написана, в таком случае возвращается 0
+            file_size = int(response.headers.get('Content-Length', 0))
+
+            # Проверяем первые 10 КБ для определения MIME-типа. Именно столько КБ являются
+            # оптимальным вариантом между надежностью и объемом запрашиваемых данных
+            first_chunk = next(response.iter_content(1024 * 10))
+            mime_type = magic.from_buffer(first_chunk, mime=True)
+
+            if mime_type not in dict_ext:
+                print(f"Пропускаем файл с типом {mime_type}, не поддерживаемый.")
+                return
+
+            extension = dict_ext[mime_type]
+            final_filename = os.path.join(name_dir, f'foto_{count}{extension}')
+
+            # Продолжаем загрузку оставшейся части файла
+            with open(final_filename, 'wb') as f:
+                f.write(first_chunk)  # Записываем первую часть
+                # Начинаем прогрузку оставшихся частей
+                # Unit="В" - показывает единицы измерения прогресс-бара. Байты
+                # unit_scale=True - масштабирует в Байты в КБ, МБ, ГБ
+                # desc=f"..."— описание прогресс-бара
+                progress = tqdm(total=file_size, unit="B", unit_scale=True,
+                                desc=f"Скачиваю {final_filename}")
+                # Загрузка по частям по 1 МБ за раз. Это лучше, чем загрузить весь файл за раз
+                # т.к. 1) есть возможность восстановить загрузку, если она прервалась
+                #      2) можно наблюдать за прогрессом скачивания
+                for chunk in response.iter_content(1024 * 1024):
+                    # При нестабильном подключении сервер может вернуть пустой чанк
+                    if chunk:
+                        # Записываем чанк в файл
+                        f.write(chunk)
+                        # Обновляем прогресс-бар
+                        progress.update(len(chunk))
+
+    except Exception as e:
+        if str(e) != "'module' object is not callable":
+            print(f"Ошибка при скачивании файла: {e}")
+
+
 
 
 def main(url: str, path: str) -> None:
