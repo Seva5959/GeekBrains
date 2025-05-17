@@ -31,8 +31,10 @@ def get_all_images(url: str) -> list[str]:
         # attrs превращает img (условно "str") в условно "словарь", где
         # src и alt ключи, а остальное значение
         img_url = img.attrs.get('src')
+        print(img_url)
         # Бывают ленивые загрузки. Img загружаются непосредственно, когда пользователь доскролил
         # Поэтому они не лежат стандартно в теге <img>
+        # И без этой строчки может возникнуть ошибка
         if not img_url:
             continue
         # Отрабатывает относительные пути по типу 1)/img/logo.png 2)/assets/img.jpg 3)images/pic.png
