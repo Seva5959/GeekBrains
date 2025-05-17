@@ -5,7 +5,8 @@ import bs4
 import urllib.parse
 import magic
 
-site_name = 'https://ru.wikipedia.org/wiki/%D0%AD%D0%BD%D1%82%D1%80%D0%BE%D0%BF%D0%B8%D1%8F_%D0%B2_%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9_%D1%82%D0%B5%D1%80%D0%BC%D0%BE%D0%B4%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8%D0%BA%D0%B5'
+# site_name = 'https://ru.wikipedia.org/wiki/%D0%AD%D0%BD%D1%82%D1%80%D0%BE%D0%BF%D0%B8%D1%8F_%D0%B2_%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9_%D1%82%D0%B5%D1%80%D0%BC%D0%BE%D0%B4%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8%D0%BA%D0%B5'
+site_name =  'https://ca.pinterest.com/ideas/%D1%84%D0%BE%D1%82%D0%BE-%D0%BD%D0%B0-%D0%B0%D0%B2%D1%83-%D1%81-%D0%BA%D0%BE%D1%82%D0%B8%D0%BA%D0%B0%D0%BC%D0%B8/947752823216/'
 dir_for_images = 'storage'
 dict_ext = {'image/jpeg': '.jpeg',
             'image/png': '.png',
@@ -62,52 +63,49 @@ def is_valid(url: str) -> bool:
 
 def download(url_img: str, name_dir: str, count: int) -> None:
     os.makedirs(name_dir, exist_ok=True)
-    try:
-        with requests.get(url_img, stream=True) as response:
-            # Проверяем статус ответа
-            if response.status_code != 200:
-                raise Exception("Файл не найден")
+    with requests.get(url_img, stream=True) as response:
+         # Проверяем статус ответа
+        if response.status_code != 200:
+            raise Exception("Файл не найден")
 
-            # Определяем длину файла. Это просто чтения заголовка, никак не тормозит код
-            # Но не всегда длина написана, в таком случае возвращается 0
-            file_size = int(response.headers.get('Content-Length', 0))
+        # Определяем длину файла. Это просто чтения заголовка, никак не тормозит код
+        # Но не всегда длина написана, в таком случае возвращается 0
+        file_size = int(response.headers.get('Content-Length', 0))
 
-            # Проверяем первые 10 КБ для определения MIME-типа. Именно столько КБ являются
-            # оптимальным вариантом между надежностью и объемом запрашиваемых данных
-            first_chunk = next(response.iter_content(1024 * 10))
-            mime_type = magic.from_buffer(first_chunk, mime=True)
+        # Проверяем первые 10 КБ для определения MIME-типа. Именно столько КБ являются
+        # оптимальным вариантом между надежностью и объемом запрашиваемых данных
+        first_chunk = next(response.iter_content(1024 * 10))
 
-            if mime_type not in dict_ext:
-                print(f"Пропускаем файл с типом {mime_type}, не поддерживаемый.")
-                return
+        # Узнаем mime файла
+        mime = magic.Magic(mime=True)
+        mime_type = mime.from_buffer(first_chunk)
 
-            extension = dict_ext[mime_type]
-            final_filename = os.path.join(name_dir, f'foto_{count}{extension}')
+        if mime_type not in dict_ext:
+            print(f"Пропускаем файл с типом {mime_type}, не поддерживаемый.")
+            return
 
-            # Продолжаем загрузку оставшейся части файла
-            with open(final_filename, 'wb') as f:
-                f.write(first_chunk)  # Записываем первую часть
-                # Начинаем прогрузку оставшихся частей
-                # Unit="В" - показывает единицы измерения прогресс-бара. Байты
-                # unit_scale=True - масштабирует в Байты в КБ, МБ, ГБ
-                # desc=f"..."— описание прогресс-бара
-                progress = tqdm(total=file_size, unit="B", unit_scale=True,
+        extension = dict_ext[mime_type]
+        final_filename = os.path.join(name_dir, f'foto_{count}{extension}')
+
+        # Продолжаем загрузку оставшейся части файла
+        with open(final_filename, 'wb') as f:
+            f.write(first_chunk)  # Записываем первую часть
+            # Начинаем прогрузку оставшихся частей
+            # Unit="В" - показывает единицы измерения прогресс-бара. Байты
+            # unit_scale=True - масштабирует в Байты в КБ, МБ, ГБ
+            # desc=f"..."— описание прогресс-бара
+            progress = tqdm.tqdm(total=file_size, unit="B", unit_scale=True,
                                 desc=f"Скачиваю {final_filename}")
-                # Загрузка по частям по 1 МБ за раз. Это лучше, чем загрузить весь файл за раз
-                # т.к. 1) есть возможность восстановить загрузку, если она прервалась
-                #      2) можно наблюдать за прогрессом скачивания
-                for chunk in response.iter_content(1024 * 1024):
-                    # При нестабильном подключении сервер может вернуть пустой чанк
-                    if chunk:
-                        # Записываем чанк в файл
-                        f.write(chunk)
-                        # Обновляем прогресс-бар
-                        progress.update(len(chunk))
-
-    except Exception as e:
-        if str(e) != "'module' object is not callable":
-            print(f"Ошибка при скачивании файла: {e}")
-
+            # Загрузка по частям по 1 МБ за раз. Это лучше, чем загрузить весь файл за раз
+            # т.к. 1) есть возможность восстановить загрузку, если она прервалась
+            #      2) можно наблюдать за прогрессом скачивания
+            for chunk in response.iter_content(1024 * 1024):
+                # При нестабильном подключении сервер может вернуть пустой чанк
+                if chunk:
+                    # Записываем чанк в файл
+                    f.write(chunk)
+                    # Обновляем прогресс-бар
+                    progress.update(len(chunk))
 
 
 
