@@ -5,12 +5,14 @@ import bs4
 import requests
 import magic
 
-site = ''
+site = 'https://ca.pinterest.com/ideas/%D1%84%D0%BE%D1%82%D0%BE-%D0%BD%D0%B0-%D0%B0%D0%B2%D1%83-%D1%81-%D0%BA%D0%BE%D1%82%D0%B8%D0%BA%D0%B0%D0%BC%D0%B8/947752823216/'
 dict_ext = {'image/jpeg': '.jpeg',
             'image/png': '.png',
             'image/gif': '.gif',
             'image/webp': '.webp',
             'image/svg': '.svg', }
+direction = 'storage'
+
 
 def get_all_src_imgs(url: str) -> list[str]:
     """
@@ -68,8 +70,8 @@ def download_file_from_site(url: str, direction: str, count: int) -> None:
     with requests.get(url, stream=True) as response:
         if response.status_code != 200:
             raise Exception('Файл не найден')
-        file_size = int(response.headers.get('Content-Length',0))
-        first_chunk = next(response.iter_content(1024*10))
+        file_size = int(response.headers.get('Content-Length', 0))
+        first_chunk = next(response.iter_content(1024 * 10))
         mime = magic.Magic(mime=True)
         mime_type = mime.from_buffer(first_chunk)
         if mime_type not in dict_ext:
@@ -83,10 +85,31 @@ def download_file_from_site(url: str, direction: str, count: int) -> None:
             f.write(first_chunk)
             progress = tqdm.tqdm(total=file_size, unit='B', unit_scale=True,
                                  desc=f'Скачиваю {file_size}')
-            for chunk in response.iter_content(1024*10):
+            for chunk in response.iter_content(1024 * 10):
                 if chunk:
                     f.write(chunk)
                     progress.update(len(chunk))
 
 
+def main(url: str, dire: str) -> None:
+    '''
+    Функция очищает директорию перед загрузкой файлов. После вызывает основную логику скачивания
+    Args:
+        url: str - Ссылка на сайт, с которого нужно скачать файлы
+        dire: str - Директория для скачивания
+    Returns:
+        Ничего не возращает
+    '''
+    for file in os.listdir(dire):
+        path_file = os.path.join(dire, file)
+        os.unlink(path_file)
 
+    count = 0
+    url_files = get_all_src_imgs(url)
+    for url_file in url_files:
+        count += 1
+        download_file_from_site(url_file, dire, count)
+
+
+if __name__ == '__main__':
+    main(site, direction)
