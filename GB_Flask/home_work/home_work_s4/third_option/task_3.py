@@ -64,6 +64,8 @@ def is_valid(url: str) -> bool:
 
 def download(url_img: str, name_dir: str, count: int) -> None:
     os.makedirs(name_dir, exist_ok=True)
+    # Если stream=True - файл скачивается чанками
+    # Если stream=False - файл скачивается полностью, по умолчанию стоит
     with requests.get(url_img, stream=True) as response:
          # Проверяем статус ответа
         if response.status_code != 200:
@@ -78,6 +80,8 @@ def download(url_img: str, name_dir: str, count: int) -> None:
         first_chunk = next(response.iter_content(1024 * 10))
 
         # Узнаем mime файла
+        # mime=True дает только тип. Пример: image/jpeg
+        # mime=False дает больше информации. Пример: ISO Media, MP4 v2 [ISO 14496-14], damaged
         mime = magic.Magic(mime=True)
         mime_type = mime.from_buffer(first_chunk)
 

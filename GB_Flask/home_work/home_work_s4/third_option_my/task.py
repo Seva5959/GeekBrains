@@ -3,9 +3,14 @@ import tqdm
 import os
 import bs4
 import requests
+import magic
 
 site = ''
-
+dict_ext = {'image/jpeg': '.jpeg',
+            'image/png': '.png',
+            'image/gif': '.gif',
+            'image/webp': '.webp',
+            'image/svg': '.svg', }
 
 def get_all_src_imgs(url: str) -> list[str]:
     """
@@ -47,19 +52,41 @@ def url_is_valid(url: str) -> bool:
     return bool(parsed.scheme) and bool(parsed.netloc)
 
 
-def download_file_from_site(url: str, direction: str, count: int ) -> None:
+def download_file_from_site(url: str, direction: str, count: int) -> None:
     '''
-    Функция скачивает файл с сайта
+    Функция скачивает файл с данного url в указанную директорию
     Args:
         url: str - Ссылка на файл
-        direction: str - директория для сохранения файла
+        direction: str - Директория для сохранения файла
         count: int - Число для имени файла. Подразумевается, что функция будет итерироваться и для
         уникального имени необходимо добавить число
     Returns:
-        None
+        None - Функция ничего не возращает, но скачивает файл на диск
     '''
 
-    os.makedirs(direction,exist_ok=True )
-    with requests.get(url, stream=True)as responce:
-    
+    os.makedirs(direction, exist_ok=True)
+    with requests.get(url, stream=True) as response:
+        if response.status_code != 200:
+            raise Exception('Файл не найден')
+        file_size = int(response.headers.get('Content-Length',0))
+        first_chunk = next(response.iter_content(1024*10))
+        mime = magic.Magic(mime=True)
+        mime_type = mime.from_buffer(first_chunk)
+        if mime_type not in dict_ext:
+            print(f"Пропускаем файл с типом {mime_type}, не поддерживаемый.")
+            return
+
+        extension = dict_ext[mime_type]
+        full_name_file = os.path.join(direction, f'file_{count}.{extension}')
+
+        with open(full_name_file, mode='wb') as f:
+            f.write(first_chunk)
+            progress = tqdm.tqdm(total=file_size, unit='B', unit_scale=True,
+                                 desc=f'Скачиваю {file_size}')
+            for chunk in response.iter_content(1024*10):
+                if chunk:
+                    f.write(chunk)
+                    progress.update(len(chunk))
+
+
 
