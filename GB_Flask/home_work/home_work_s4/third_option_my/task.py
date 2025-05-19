@@ -45,3 +45,21 @@ def url_is_valid(url: str) -> bool:
     '''
     parsed = urllib.parse.urlparse(url)
     return bool(parsed.scheme) and bool(parsed.netloc)
+
+
+def download_file_from_site(url: str, direction: str, count: int ) -> None:
+    '''
+    Функция скачивает файл с сайта
+    Args:
+        url: str - Ссылка на файл
+        direction: str - директория для сохранения файла
+        count: int - Число для имени файла. Подразумевается, что функция будет итерироваться и для
+        уникального имени необходимо добавить число
+    Returns:
+        None
+    '''
+
+    os.makedirs(direction,exist_ok=True )
+    with requests.get(url, stream=True)as responce:
+    
+
