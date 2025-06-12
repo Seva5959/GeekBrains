@@ -66,7 +66,6 @@ def download_file_from_site(url: str, direction: str, count: int) -> None:
         None - Функция ничего не возращает, но скачивает файл на диск
     '''
 
-    os.makedirs(direction, exist_ok=True)
     with requests.get(url, stream=True) as response:
         if response.status_code != 200:
             raise Exception('Файл не найден')
@@ -84,7 +83,7 @@ def download_file_from_site(url: str, direction: str, count: int) -> None:
         with open(full_name_file, mode='wb') as f:
             f.write(first_chunk)
             progress = tqdm.tqdm(total=file_size, unit='B', unit_scale=True,
-                                 desc=f'Скачиваю {file_size}')
+                                 desc=f'Скачиваю {full_name_file}')
             for chunk in response.iter_content(1024 * 10):
                 if chunk:
                     f.write(chunk)
@@ -100,6 +99,8 @@ def main(url: str, dire: str) -> None:
     Returns:
         Ничего не возращает
     '''
+    os.makedirs(direction, exist_ok=True)
+
     for file in os.listdir(dire):
         path_file = os.path.join(dire, file)
         os.unlink(path_file)
