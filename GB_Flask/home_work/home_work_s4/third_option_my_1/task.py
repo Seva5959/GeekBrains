@@ -65,10 +65,10 @@ def download_file_from_site(url: str, direction: str, count: int) -> None:
     Returns:
         None - Функция ничего не возращает, но скачивает файл на диск
     '''
-
     with requests.get(url, stream=True) as response:
         if response.status_code != 200:
-            raise Exception('Файл не найден')
+            print(f"Файл по {url} не найден, пропускаем.")
+            return
         file_size = int(response.headers.get('Content-Length', 0))
         first_chunk = next(response.iter_content(1024 * 10))
         mime = magic.Magic(mime=True)
@@ -83,11 +83,12 @@ def download_file_from_site(url: str, direction: str, count: int) -> None:
         with open(full_name_file, mode='wb') as f:
             f.write(first_chunk)
             progress = tqdm.tqdm(total=file_size, unit='B', unit_scale=True,
-                                 desc=f'Скачиваю {full_name_file}')
+                             desc=f'Скачиваю {full_name_file}')
             for chunk in response.iter_content(1024 * 10):
                 if chunk:
                     f.write(chunk)
                     progress.update(len(chunk))
+
 
 
 def main(url: str, dire: str) -> None:
