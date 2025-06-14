@@ -6,8 +6,7 @@ import requests
 import magic
 
 
-name_sitec = 'https://ca.pinterest.com/ideas/%D1%84%D0%BE%D1%82%D0%BE-%D0%BD%D0%B0-%D0%B0%D0%B2%D1%83-%D1%81-%D0%BA%D0%BE%D1%82%D0%B8%D0%BA%D0%B0%D0%BC%D0%B8/947752823216/'
-
+name_sitec = 'https://market.yandex.ru/catalog--radiodetali-i-elektronnye-komponenty/61856/list?utm_source=yandex&utm_medium=search&utm_campaign=ymp_dp_cehac_catalog_2_adv_dyb_search_rus&utm_content=cid%3A113507160%7Cgid%3A5479839618%7Caid%3A16405798637%7Cph%3A53075288949%7Cpt%3Apremium%7Cpn%3A1%7Csrc%3Anone%7Cst%3Asearch%7Crid%3A53075288949%7Ccgcid%3A0&clid=1601&yclid=5844811900972695551&text=esp32'
 dict_ext = {'image/jpeg': '.jpeg',
             'image/png': '.png',
             'image/gif': '.gif',
@@ -18,7 +17,7 @@ direction = 'storage'
 
 def get_all_src(link: str) -> list[str]:
     urls = []
-    soup = bs4.BeautifulSoup(requests.get(link).content, 'html.parser')  # В случае ошибки посмотреть сюда
+    soup = bs4.BeautifulSoup(requests.get(link).content, 'html.parser')
     for img in tqdm.tqdm(iterable=soup.find_all('img'), desc='Извлекаю из img src:'):
         img_src = img.attrs.get('src')
         if not img_src:
@@ -51,12 +50,12 @@ def downloader_img(link: str, direction_to_save: str, count: int ) -> None:
             return
 
         extension = dict_ext[mime_type]
-        full_name_sitec = os.path.join(direction, f'file_{count}.{extension}')
+        full_name_sitec = os.path.join(direction_to_save, f'file_{count}{extension}')
 
         with open(full_name_sitec, mode='wb') as f :
             f.write(first_chunk)
             progress = tqdm.tqdm(total=file_size, unit='B', unit_scale=True,
-                                 desk=f'Download {full_name_sitec}')
+                                 desc=f'Download {full_name_sitec}')
             for chunk in response.iter_content(1024*10):
                 if chunk:
                     f.write(chunk)
@@ -73,7 +72,7 @@ def main(link: str, direction_to_save: str) -> None:
     url_files = get_all_src(link)
     for url_file in url_files:
         count += 1
-        downloader_img(link, direction_to_save, count)
+        downloader_img(url_file, direction_to_save, count)
 
 
 if __name__ == '__main__':

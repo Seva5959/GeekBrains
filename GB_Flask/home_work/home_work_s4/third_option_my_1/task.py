@@ -6,6 +6,7 @@ import requests
 import magic
 
 site = 'https://ca.pinterest.com/ideas/%D1%84%D0%BE%D1%82%D0%BE-%D0%BD%D0%B0-%D0%B0%D0%B2%D1%83-%D1%81-%D0%BA%D0%BE%D1%82%D0%B8%D0%BA%D0%B0%D0%BC%D0%B8/947752823216/'
+
 dict_ext = {'image/jpeg': '.jpeg',
             'image/png': '.png',
             'image/gif': '.gif',
@@ -78,7 +79,8 @@ def download_file_from_site(url: str, direction: str, count: int) -> None:
             return
 
         extension = dict_ext[mime_type]
-        full_name_file = os.path.join(direction, f'file_{count}.{extension}')
+        full_name_file = os.path.join(direction, f'file_{count}{extension}')
+        print(f'{full_name_file=}')
 
         with open(full_name_file, mode='wb') as f:
             f.write(first_chunk)
@@ -88,7 +90,6 @@ def download_file_from_site(url: str, direction: str, count: int) -> None:
                 if chunk:
                     f.write(chunk)
                     progress.update(len(chunk))
-
 
 
 def main(url: str, dire: str) -> None:
@@ -110,6 +111,7 @@ def main(url: str, dire: str) -> None:
     url_files = get_all_src_imgs(url)
     for url_file in url_files:
         count += 1
+        # print(f'{url_file=}')
         download_file_from_site(url_file, dire, count)
 
 
