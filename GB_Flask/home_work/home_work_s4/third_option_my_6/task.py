@@ -17,13 +17,15 @@ def find_all_src(link: str) -> list[str]:
     urls = []
     response = requests.get(link).content
     soup = bs4.BeautifulSoup(response, 'html.parser')
-    for img in tqdm.tqdm(iterable=soup.find_all('img'), desk='Extracting all src from img'):
+    for img in tqdm.tqdm(iterable=soup.find_all('img'), desc='Extracting all src from img'):
         img_src = img.attrs.get('src')
         if not img_src:
             continue
-        if '?' in img_src:
-            img_src = img_src.split('?'[0])
+
         img_url = urllib.parse.urljoin(link, img_src)
+        if '?' in img_url:
+            img_url = img_url.split('?')[0]
+
         if is_valid(img_url):
             urls.append(img_url)
     return urls
@@ -36,7 +38,7 @@ def is_valid(link: str)->bool:
 
 def download(url: str, direction_to_save: str, count: int) -> None:
     with requests.get(url, stream=True) as response:
-        if response.status_code == 200:
+        if response.status_code != 200:
             print(f'file with this url: {url} was not found! Skip it')
             return
 
@@ -51,19 +53,33 @@ def download(url: str, direction_to_save: str, count: int) -> None:
         extension = dict_ext[mime_type]
         full_filename = os.path.join(direction_to_save, f'foto_{count}{extension}')
 
+        with open(full_filename, mode='wb') as f:
+            f.write(first_chunk)
+            progress = tqdm.tqdm(total=file_size, unit='B', unit_scale=True,
+                                 desc=f'Download {full_filename}')
+            for chunk in response.iter_content(1024 * 1024):
+                if chunk:
+                    f.write(chunk)
+                    progress.update(len(chunk))
+
+
+def main(site_link: str, dire: str) -> None:
+    os.makedirs(dire,exist_ok=True)
+    count = 0
+
+    for file in os.listdir(dire):
+        path = os.path.join(dire, file)
+        os.unlink(path)
+
+    urls = find_all_src(site_link)
+    for url in urls:
+        count += 1
+        download(url,dire,count)
 
 
 
-
-
-
-
-
-
-
-
-
-
+if __name__ == '__main__':
+    main(name_sitec, direction)
 
 
 

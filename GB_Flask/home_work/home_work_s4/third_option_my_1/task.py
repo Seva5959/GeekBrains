@@ -80,13 +80,12 @@ def download_file_from_site(url: str, direction: str, count: int) -> None:
 
         extension = dict_ext[mime_type]
         full_name_file = os.path.join(direction, f'file_{count}{extension}')
-        print(f'{full_name_file=}')
 
         with open(full_name_file, mode='wb') as f:
             f.write(first_chunk)
             progress = tqdm.tqdm(total=file_size, unit='B', unit_scale=True,
                              desc=f'Скачиваю {full_name_file}')
-            for chunk in response.iter_content(1024 * 10):
+            for chunk in response.iter_content(1024 * 1024):
                 if chunk:
                     f.write(chunk)
                     progress.update(len(chunk))
